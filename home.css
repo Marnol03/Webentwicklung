@@ -1,0 +1,143 @@
+body{
+    font-family: 'poppins' , sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    top:0;
+    color:white;
+  
+}
+.name{
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+.name span{
+   color: #3E3BC0;
+   font-weight: bold;
+   font-size: 3em;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+ul >li {
+    list-style-type: none;
+}
+ul a{
+    color: white;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+ul a:hover{
+    background-color: #86A7E8;
+}
+ul .home{
+    background-color: #3E3BC0;
+    color:white;
+}
+h1{
+    text-align: center;
+    font-weight: 900;
+}
+p{
+    text-align: center;
+}
+.stil{
+    width: 100%;
+}
+#boutton{
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+    padding: 50px
+
+}
+#clic{
+    color: white;
+    background-color: #3E3BC0;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 20px; 
+    transition: transform 0.5s;
+}
+#clic:hover{
+    cursor:pointer;
+    transform: scale(1.06);
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #3E3BC0;
+    position:absolute;
+    height: 100px;
+    width:100%;
+    padding-top:15px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    clear: both;
+}
+.space{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.foo{
+    color: white;
+    text-decoration: none;
+}
+.foo:hover{
+    color: green;
+}
+@media screen and (max-width:950px){
+    body{
+        font-family: 'poppins' , sans-serif;
+        margin: 0%;
+        padding: 0%;
+        background-image: url(Bilder/background_img.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: -100px;
+    }
+    h1{
+        text-align: center;
+        color: white;
+    }
+    p{
+        text-align: center;
+        color: white;
+    }
+    .stil{
+        width: 100%;
+        height: 22rem;
+    }
+    #boutton{
+        text-decoration: none;
+        display: flex;
+        justify-content: right;
+        padding: 50px
+    
+    }
+    #clic{
+        color: white;
+        background-color: #3E3BC0;
+        text-decoration: none;
+        margin-left: 20px;
+        padding: 20px;
+        border-radius: 20px; 
+        transition: transform 0.5s;
+    }
+    #clic:hover{
+        cursor:pointer;
+        transform: scale(1.06);
+    }
+}
