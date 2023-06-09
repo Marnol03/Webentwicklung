@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de-de">
+
+<head>
+    <link href="style2.css" rel="stylesheet" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos zu verkaufen</title>
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="name" ><span>D</span>rive<span>D</span>eal</div>
+        <ul class="nav">
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="index.html">Customizer</a></li>
+            <li><a href="warenkorp.html">Warenkorb</a></li>
+            <li><a href="form.html" class="hilfe">Hilfe</a></li>
+            <li><a href="#">Über uns</a></li>
+        </ul>
+        <div class="toggle">
+            <i class="fa-sharp fa-solid fa-bars ouvrir" style="color: #000000;" ></i>
+            <i class="fa-solid fa-circle-xmark fermer" style="color: #000000;"></i>
+        </div>
+        
+    </header>
+    <div id="pub">
+        <div class="werbung">
+            <img src="bild/haus2.jpg" alt="haus1">
+            <img src="bild/haus3.jpg" alt="haus2">
+            <img src="bild/haus6.jpg" alt="haus3">
+            <img src="bild/haus2.jpg" alt="haus4">
+            <img src="bild/haus3.jpg" alt="haus5">
+        </div>
+    </div>
+    <h1>Autokonfigurator</h1>
+
+    <section class="box">
+        <div class="bild">
+          <p>Roues</p>
+          <img src="bild/element7.jpg" alt="roue" id="roue">
+          <div class="liste-cachee" id="liste-roues">
+            <img src="bild/element7.jpg" alt="New roue 1" class="photo">
+            <img src="bild/element7.jpg" alt="New roue 2" class="photo">
+            <img src="bild/element7.jpg" alt="New roue 3" class="photo">
+          </div>
+          <p>Sieges</p>
+          <img src="bild/element8.jpg" alt="siege" id="siege">
+          <div class="liste-cachee" id="liste-sieges">
+            <img src="bild/element8.jpg" alt="New siege 1" class="photo">
+            <img src="bild/element8.jpg" alt="New siege 2" class="photo">
+            <img src="bild/element8.jpg" alt="New siege 3" class="photo">
+          </div>
+          <p>Parechoc</p>
+          <img src="bild/haus2.jpg" alt="parechoc" id="parechoc">
+          <div class="liste-cachee" id="liste-parechocs">
+            <img src="bild/haus2.jpg" alt="New parechoc 1" class="photo">
+            <img src="bild/haus2.jpg" alt="New parechoc 2" class="photo">
+            <img src="bild/haus2.jpg" alt="New parechoc 3" class="photo">
+          </div> 
+        </div>
+      
+        <div id="selectedPhoto" class="box1">
+          <!--<img id="selectedImg" src="" alt="Selected Photo">-->
+          <span id="cancelButton" onclick="cancelSelection()">✕</span>
+        </div>
+      </section>
+        
+    <p><a href="#">Zum Warenkorb</a></p>    
+   
+    <footer>
+            
+        <div class="foot">Kontakt & Hilfe<br><a href="#" class="foo">Hilfe</a><br><a href="#" class="foo">Über uns</a> </div>
+        <div class="foot">Folge uns<br><img src="bild/facebook.png" alt="facebook" width="25px" height="25px"> <Span class="space"></Span><img src="bild/instagram.png" alt="instagram" width="25px" height="25px"><Span class="space"></Span><img src="bild/twitter.png" alt="twitter" width="25px" height="25px"></div>
+        <div>&copy; [2023] [Drive Deal].Alle Rechte vorbehalten<br>Datenschutz | Datenschutzeinstellungen | Impressum</div>
+    </footer>
+
+</body>
+</html>
