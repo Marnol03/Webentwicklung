@@ -1,3 +1,11 @@
+let toggle = document.querySelector(".toggle")
+let body = document.querySelector("body")
+ 
+toggle.addEventListener('click',function(){
+    body.classList.toggle('open')
+})
+
+
 var roue = document.getElementById('roue');
 var listePhotos = document.getElementById('liste-roues');
 roue.addEventListener('click', function() {
@@ -35,41 +43,51 @@ parechoc.addEventListener("click", function() {
               selectedPhoto.classList.remove('selected');
             }
             event.target.classList.add('selected');
-            selectedPhotos.push(event.target.src);
-
+            var photoSrc = event.target.src;
+        
+            // Vérifier si la photo a déjà été ajoutée
+            var isPhotoAdded = selectedPhotos.includes(photoSrc);
+            if (!isPhotoAdded) {
+              selectedPhotos.push(photoSrc);
+        
+              // Ajouter la photo dans le box1
+              var imgElement = document.createElement('img');
+              imgElement.src = photoSrc;
+              imgElement.alt = 'Selected Photo ' + (selectedPhotos.length);
+              selectedPhoto.appendChild(imgElement);
+            }
           });
         }
 
         var selectedPhotos = [];
 
-        /*var photos = document.querySelectorAll('.photo');
-        for (var i = 0; i < photos.length; i++) {
-          photos[i].addEventListener('click', function(event) {
-            event.stopPropagation();
-            var selectedPhoto = document.querySelector('.selected');
-            if (selectedPhoto) {
-              selectedPhoto.classList.remove('selected');
-            }
-            event.target.classList.add('selected');
-        
-            // Sauvegarder la photo sélectionnée
-            selectedPhotos.push(event.target.src);
-          });
-        }*/
-        
         var selectedPhoto = document.getElementById('selectedPhoto');
         selectedPhoto.addEventListener('click', function() {
-          // Afficher les photos sélectionnées dans le box1
+          // Réinitialiser les photos affichées dans le box1
+          selectedPhoto.innerHTML = '';
+        
+          // Réafficher toutes les photos sélectionnées
           for (var i = 0; i < selectedPhotos.length; i++) {
             var imgElement = document.createElement('img');
             imgElement.src = selectedPhotos[i];
-            //imgElement.alt = 'Selected Photo ' + (i + 1);
-            imgElement.alt = 'Selected Photo ' + i;
+            imgElement.alt = 'Selected Photo ' + (i + 1);
             selectedPhoto.appendChild(imgElement);
           }
         });
         
-        /*function cancelSelection() {
+        function cancelSelection() {
           selectedPhotos = []; // Réinitialiser les photos sélectionnées
           selectedPhoto.innerHTML = ''; // Effacer les photos affichées dans le box1
-        }*/
+        }        
+
+        /*var warenkorbLink = document.getElementById('warenkorbLink');
+warenkorbLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Empêcher le comportement par défaut du lien
+
+  // Envoyer les photos sélectionnées à la page "warenkorb"
+  var photoUrls = selectedPhotos.map(function(photo) {
+    return encodeURIComponent(photo);
+  });
+  var url = 'warenkorb.html?photos=' + photoUrls.join(',');
+  window.location.href = url;
+});*/
