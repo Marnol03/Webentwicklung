@@ -1,79 +1,95 @@
 let toggle = document.querySelector(".toggle")
 let body = document.querySelector("body")
  
-toggle.addEventListener('click',function(){
+toggle.addEventListener('click',function()
+  {
     body.classList.toggle('open')
-})
+  }
+)
 
 
 var roue = document.getElementById('roue');
 var listePhotos = document.getElementById('liste-roues');
-roue.addEventListener('click', function() {
-    if (listePhotos.style.display === 'none') {
+roue.addEventListener('click', function() 
+  {
+    if (listePhotos.style.display === 'none')
+    {
       listePhotos.style.display = 'block';
     } else {
       listePhotos.style.display = 'none';
     }
-  });
+  }
+);
 
 var siege = document.getElementById('siege');
 var listeBild = document.getElementById('liste-sieges');
-siege.addEventListener("click", function() {
+siege.addEventListener("click", function() 
+  {
     if (listeBild.style.display === 'none') {
         listeBild.style.display = 'block';
-      } else {
+    } 
+    else {
         listeBild.style.display = 'none';
-      }});
+    }
+  }
+);
 
 var parechoc = document.getElementById('parechoc');
 var listeBilder = document.getElementById('liste-parechocs');
-parechoc.addEventListener("click", function() {
-    if (listeBilder.style.display === 'none') {
+parechoc.addEventListener("click", function() 
+  {
+    if (listeBilder.style.display === 'none') 
+    {
         listeBilder.style.display = 'block';
-      } else {
+    } 
+    else {
         listeBilder.style.display = 'none';
-      }
     }
+  }
 );
 
+var index = 0;
 var photos = document.querySelectorAll('.photo');
-for (var i = 0; i < photos.length; i++) {
-    photos[i].addEventListener('click', function(event) {
-    event.stopPropagation();
-    var selectedPhoto = document.querySelector('.selected');
-    if (selectedPhoto) {
-        selectedPhoto.classList.remove('selected');
-    }
-    event.target.classList.add('selected');
-    var photoSrc = event.target.src;
-        
-    // Vérifier si la photo a déjà été ajoutée
-    var isPhotoAdded = selectedPhotos.includes(photoSrc);
-    if (!isPhotoAdded) {
+for (var i = 0; i < photos.length; i++) 
+{
+    photos[i].addEventListener('click', function(event)
+    {
+      event.stopPropagation();
+      var selectedPhoto = document.querySelector('.selected');
+      if (selectedPhoto) {
+          selectedPhoto.classList.remove('selected');
+      }
+      event.target.classList.add('selected');
+      var photoSrc = event.target.src;
+          
+      // Vérifier si la photo a déjà été ajoutée
+      var isPhotoAdded = selectedPhotos.includes(photoSrc);
+      if (!isPhotoAdded) {
         selectedPhotos.push(photoSrc);
-        
-    // Ajouter la voiture correspondante dans selectedCars
+          
+        // Ajouter la voiture correspondante dans selectedCars
         var carIndex = selectedPhotos.length - 1;
         var carElement = document.querySelectorAll('.auto .photos')[carIndex];
         var carSrc = carElement.src;
         selectedCars.push(carSrc);
 
-
-      // Vérifier si les 3 premières images sont sélectionnées dans chaque liste
-      if (selectedPhotos.length === 3) {
-          var index = 0;
+        // Vérifier si les 3 premières images sont sélectionnées dans chaque liste
+        if (selectedPhotos.length === 3) 
+        {
+        //var index = 0;
           if (selectedPhotos[0] === document.querySelector('#liste-roues .photo:nth-child(1)').src &&
-              selectedPhotos[1] === document.querySelector('#liste-sieges .photo:nth-child(1)').src &&
-              selectedPhotos[2] === document.querySelector('#liste-parechocs .photo:nth-child(1)').src) {
-              index = 0;
-          } else if (selectedPhotos[0] === document.querySelector('#liste-roues .photo:nth-child(2)').src &&
-                    selectedPhotos[1] === document.querySelector('#liste-sieges .photo:nth-child(2)').src &&
-                    selectedPhotos[2] === document.querySelector('#liste-parechocs .photo:nth-child(2)').src) {
-            index = 1;
+            selectedPhotos[1] === document.querySelector('#liste-sieges .photo:nth-child(1)').src &&
+            selectedPhotos[2] === document.querySelector('#liste-parechocs .photo:nth-child(1)').src) {
+            index = 0;
+          }
+          else if (selectedPhotos[0] === document.querySelector('#liste-roues .photo:nth-child(2)').src &&
+                  selectedPhotos[1] === document.querySelector('#liste-sieges .photo:nth-child(2)').src &&
+                  selectedPhotos[2] === document.querySelector('#liste-parechocs .photo:nth-child(2)').src) {
+                  index = 1;
           } else if (selectedPhotos[0] === document.querySelector('#liste-roues .photo:nth-child(3)').src &&
-                    selectedPhotos[1] === document.querySelector('#liste-sieges .photo:nth-child(3)').src &&
-                    selectedPhotos[2] === document.querySelector('#liste-parechocs .photo:nth-child(3)').src) {
-            index = 2;
+                  selectedPhotos[1] === document.querySelector('#liste-sieges .photo:nth-child(3)').src &&
+                  selectedPhotos[2] === document.querySelector('#liste-parechocs .photo:nth-child(3)').src) {
+                  index = 2;
           }
 
           // Réinitialiser les photos sélectionnées
@@ -85,20 +101,22 @@ for (var i = 0; i < photos.length; i++) {
           var selectedCarSrc = selectedCar.src;
           selectedCars.push(selectedCarSrc);
           updateBox3(); // Mettre à jour le contenu du box3
-          }       
-        }
-      });
+        }       
+      }
     }
+  );
+}
 
-  var selectedPhotos = [];
-  var selectedCars = [];
+var selectedPhotos = [];
+var selectedCars = [];
 
-  var selectedPhoto = document.getElementById('selectedPhoto');
-  selectedPhoto.addEventListener('click', function() {
-  // Réinitialiser les photos affichées dans le box1
-  selectedPhoto.innerHTML = '';
-
-});
+var selectedPhoto = document.getElementById('selectedPhoto');
+selectedPhoto.addEventListener('click', function() 
+  {
+    // Réinitialiser les photos affichées dans le box1
+    selectedPhoto.innerHTML = '';
+  }
+);
         
 function cancelSelection() {
     selectedPhotos = []; // Réinitialiser les photos sélectionnées
@@ -106,16 +124,32 @@ function cancelSelection() {
     selectedPhoto.innerHTML = ''; // Effacer les photos affichées dans le box1
 } 
         
-function updateBox3() {
-    var box3 = document.getElementById('box3');
-    box3.innerHTML = '<p>AUTO</p>';
-    for (var i = 0; i < selectedCars.length; i++) {
-        var carElement = document.createElement('img');
-        carElement.src = selectedCars[i];
-        carElement.alt = 'Selected Car ' + i;
-        carElement.className = 'photos';
-        box3.appendChild(carElement);
-    }
+function updateBox3() 
+{
+  var box3 = document.getElementById('box3');
+  box3.innerHTML = '<p>AUTO</p>';
+
+  // Afficher la voiture sélectionnée dans le "box3"
+  for (var i = 0; i < selectedCars.length; i++) {
+    var carElement = document.createElement('img');
+    carElement.src = selectedCars[selectedCarIndex];
+    carElement.src = selectedCars[i];
+    carElement.alt = 'Selected Car ' + i;
+    carElement.className = 'photos';
+    box3.appendChild(carElement);
+  }
+
+  var selectedCarIndex = index;
+  if (selectedCarIndex === 0) { // si c'est la première image de "auto"
+    var auto1Content = document.getElementById('auto1').innerHTML; // récupérer le contenu de "auto1" de "beschreigung"
+    box3.innerHTML += auto1Content; // ajouter le contenu de "auto1" dans le "box3"
+  } else if (selectedCarIndex === 1) { // si c'est la deuxième image de "auto"
+    var auto2Content = document.getElementById('auto2').innerHTML; // récupérer le contenu de "auto2" de "beschreigung"
+    box3.innerHTML += auto2Content; // ajouter le contenu de "auto2" dans le "box3"
+  } else if (selectedCarIndex === 2) { // si c'est la troisième image de "auto"
+    var auto3Content = document.getElementById('auto3').innerHTML; // récupérer le contenu de "auto3" de "beschreigung"
+    box3.innerHTML += auto3Content; // ajouter le contenu de "auto3" dans le "box3"
+  }
 
   // Mettre à jour le lien du bouton "Zum Warenkorb"
   var warenkorbLink = document.getElementById('warenkorbLink');
@@ -126,5 +160,4 @@ function updateBox3() {
   } else {
     warenkorbLink.href = 'warenkorp.html';
   }
-
 }
