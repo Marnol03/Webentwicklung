@@ -1,0 +1,480 @@
+ *{
+    padding: 0;
+    margin: 0;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box;
+}
+
+
+
+
+html{
+    background-color: rgb(243, 245, 247);
+    box-sizing: border-box;
+}
+
+
+ 
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 0px;
+  overflow: hidden;
+ 
+}
+.menu li {
+    display: flex;
+    align-self: center;
+    width: 98%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .menu li a {
+    width: 98%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    color:black;
+  }
+  .menu li a:hover {
+    background: blue;
+  }
+
+  .toggle {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    background: #ddd;
+  }
+
+  #checkbox:checked + label .menu li {
+    opacity: 1;
+    visibility: visible;
+  }
+ 
+  #checkbox:checked + label .menu {
+    height: 200px;
+  }
+
+
+.autospace{
+ 
+    height: 62vh;
+    width: 98%;
+    background-color: rgb(238, 177, 102);
+position: relative;
+}
+.auto{
+    margin: 2px ;
+
+    height: 30%;
+    width: 98%;
+    background-color: rgb(250, 249, 247);
+    position: relative;
+    top: 20px;
+}
+
+.nameAuto{
+   
+    height: 18px;
+    width: 35%;
+ top: 20px;
+    background-color: rgb(250, 249, 247);
+    position: relative;
+   margin: 2px;
+    bottom: 85%;
+    
+}
+
+.preis{
+    height: 18px;
+    width: 35%;
+
+    background-color: rgb(250, 249, 247);
+    position: relative;
+    left: 55%;
+   top: 25%;
+}
+
+.bearbeitung{
+    height: 18px;
+    width: 28%;
+    background-color: white;
+    position: relative;
+   margin: 2px;
+   top: 20%;
+    
+}
+
+.beschreibung{
+    height: 25%;
+    width: 90%;
+ margin-top: 20px;
+    background-color: rgb(250, 249, 247);
+    position: relative;
+    left: 5%;
+  top: 5%;
+}
+
+.bezahlen {
+    position: relative;
+    top: 20px;
+    height: 18px;
+    width: 25%;
+    left: 70%;
+    background-color: rgb(11, 11, 112);
+    color: aliceblue;
+    
+  }
+  
+  /*footer{
+    display: flex;
+    position: absolute;
+    bottom: -5%;
+   background-color: #070707;
+    align-items: flex-start;
+    width: 98%;
+    height: 25%;
+flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .rechte{
+    right: 0px;
+    position: relative;
+    color: #fff;
+   
+
+  }
+
+  .info{
+   position: relative;
+    color: #fff;
+   left: 2px;
+  }
+
+.social {
+    position: relative;
+  right:5%;
+    color: #fff;
+    text-decoration: none;
+
+  }
+  .social img{
+    width: 15px;
+    height: 15px;
+  }*/
+
+ 
+
+  footer{
+    flex-shrink: 0;
+    border-top:1px dashed #000;
+    background-color:rgb(199, 199, 243) ;
+    color: gray;
+    width:90%;
+}
+.contenu-footer{
+    width: 300px;
+    margin: 30px 30px;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 15px;
+    padding: 25px 0 25px;
+}
+.bloc{
+    width: 25%;
+    margin: 0 30px;
+}
+
+.footer-contact h4, 
+.footer-services h4, 
+.footer-horaires h4,
+.footer-media h4{
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    margin-right: -100px;
+}
+.footer-contact p{
+    padding: 5px 0;
+    background:red;
+    margin-right:-150px;
+    margin-left:-40%;
+}
+.liste-services,
+.liste-horaires,
+.liste-media{
+    list-style-type: none;
+}
+.liste-horaires, .liste-services{
+    display: flex;
+}
+.liste-services, .liste-horaires{
+    display: flex;
+    flex-direction: column;
+}
+.liste-services{
+    margin-right: -100px;
+}
+.liste-services li{
+    padding: 2px 0;
+}
+.liste-services a{
+    text-decoration: none;
+    color: #333;
+}
+.liste-services a:hover{
+    color: rgb(87, 87, 245);
+}
+.liste-media{
+    position: relative;
+    left: 55%;
+    right: 10px;
+}
+.liste-media img{
+    margin: 10px 10px;
+}
+.liste-media a{
+    text-decoration: none;
+    color: #333;
+    align-items: center;
+    font-size: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+  @media all and (min-width: 600px) {
+ 
+    label
+    {
+        display: none;
+    }
+
+    footer{
+      display: flex;
+      position: absolute;
+      bottom: 0px;
+     background-color: #070707;
+      align-items: flex-start;
+      width: 100%;
+      height: 15%;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .rechte{
+      right: 0px;
+      position: relative;
+      color: #fff;
+     
+  
+    }
+  
+    .info{
+     position: relative;
+      color: #fff;
+     left: 15%;
+    }
+  
+  .social {
+      position: relative;
+      left: 30%;
+      color: #fff;
+      text-decoration: none;
+  bottom: 10%;
+    }
+    .social img{
+      width: 15px;
+      height: 15px;
+    }
+   
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+  
+
+
+
+
+html{
+    background-color: rgb(243, 245, 247);
+    box-sizing: border-box;
+}
+
+
+
+ menu{
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+ padding: 0;
+ margin: 0;
+ height: 50px;
+}
+
+ul{
+    display: inline-flex;
+
+}
+li{
+list-style: none;
+
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+}
+.menu li a {
+    text-decoration: none;
+    align-self: center;
+    font-size: 14px;
+    padding: 10px 50px 10px 50px;
+    top: 0px;
+    color: #070707;
+    border-radius: 50px;
+  }
+
+  .menu li a:hover {
+    background: #3405c1;
+  }
+
+.autospace{
+ 
+    height: 350px;
+    width: 98%;
+    background-color: rgb(238, 177, 102);
+position: relative;
+}
+.auto{
+    margin: 25px ;
+    height: 280px;
+    width: 35%;
+    background-color: rgb(250, 249, 247);
+    position: relative;
+    top: 20px;
+}
+
+.nameAuto{
+   
+    height: 18px;
+    width: 5%;
+ margin-top: 20px;
+    background-color: rgb(250, 249, 247);
+    position: relative;
+    left: 65%;
+    bottom: 85%;
+}
+
+.preis{
+    height: 18px;
+    width: 5%;
+ margin-top: 20px;
+    background-color: rgb(250, 249, 247);
+    position: relative;
+    left: 55%;
+    bottom:70%;
+}
+
+.bearbeitung{
+    height: 18px;
+    width: 8%;
+ margin-top: 20px;
+    background-color: rgb(250, 249, 247);
+    position: relative;
+    left: 85%;
+    bottom: 80%;
+}
+
+.beschreibung{
+    height: 50%;
+    width: 40%;
+ margin-top: 20px;
+    background-color: rgb(250, 249, 247);
+    position: relative;
+    left: 45%;
+    bottom: 85%;
+}
+
+.bezahlen {
+ position: relative;
+   left: 90%;
+   top: 10px;
+    height: 18px;
+    width: 5%;
+    background-color: rgb(11, 11, 112);
+    color: aliceblue;
+  }
+  
+  footer{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+   background-color: #070707;
+    align-items: flex-start;
+    width: 100%;
+    height: 70px;
+  }
+
+  .rechte{
+    right: 0px;
+    position: relative;
+    color: #fff;
+   
+
+  }
+
+  .info{
+   position: relative;
+    color: #fff;
+    left: 30%;
+   
+   
+  }
+
+.social {
+    position: relative;
+    left: 55%;
+    color: #fff;
+    text-decoration: none;
+
+  }
+  .social img{
+    width: 20px;
+    height: 20px;
+  }
+
+  */
