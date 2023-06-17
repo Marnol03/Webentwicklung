@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="form.css">
+        <script src="web.js" defer></script>
+    </head>
+    <body >
+        <header>
+            <div class="name" ><span>D</span>rive<span>D</span>eal</div>
+            <ul class="nav">
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="index3.html">Customizer</a></li>
+                <li><a href="warenkorp.html">Warenkorb</a></li>
+                <li><a href="form.html" class="hilfe">Hilfe</a></li>
+                <li><a href="#">Über uns</a></li>
+            </ul>
+            <div class="toggle">
+                <i class="fa-sharp fa-solid fa-bars ouvrir" style="color: #000000;" ></i>
+                <i class="fa-solid fa-circle-xmark fermer" style="color: #000000;"></i>
+            </div>
+            
+        </header>
+        <h1>Kontaktieren Sie uns</h1>
+        <div class="f1">
+            <div class="boite" id="boite1">
+                <label for="Anrede">Anrede: </label >
+                <select id="Anrede" name="Anrede">
+                    <option value="Herr" selected>Herr</option>
+                    <option value="Frau">Frau</option>
+                </select>  
+            </div>
+                <div class="boit1">
+                    <div class="boite">
+                        <label for="Nachname">Nachname: </label >
+                        <div class="bt">
+                            <i class="fa-solid fa-user-large" class="tc"></i>
+                            <input type="text" name="Nachname" id="Nachname">  
+                        </div>  
+                    </div>
+                    <div class="boite">
+                        <label for="Vorname">Vorname: </label >
+                        <div class="bt">
+                            <i class="fa-solid fa-user-large" class="tc"></i> 
+                            <input type="text" name="Vorname" id="Vorname">
+                        </div>
+                    </div>
+                </div>
+            <div class="boite">
+                <label for="Telefonnummer">Telefonnummer: </label >
+                <div class="bt">
+                    <i class="fa-solid fa-phone" class="tc"></i>
+                    <input type="number" name="Telefonnummer" id="Telefonnummer">
+                    
+                </div> 
+            </div>
+            <div class="boite">
+                <label for="Email">E-mail: </label >
+                <div class="bt">
+                    <i class="fa-solid fa-envelope" class="tc"></i>
+                    <input type="Email" name="Email" id="Email" placeholder="beispiel@xxxx.com">
+                    
+                </div>
+            </div>
+            <div class="boit">
+                <label>Nachricht: </label ><br>
+                <textarea placeholder="Schreiben sie Ihre Nachricht hier.."></textarea>
+            </div>
+        </div>
+        <div  align="center"><button >Abbrechen</button>
+            <button class="schicken">Senden</button></div>
+
+        <footer>
+            
+            <div class="foot">Kontakt & Hilfe<br><a href="#" class="foo">Hilfe</a><br><a href="#" class="foo">Über uns</a> </div>
+            <div class="foot">Folge uns<br><img src="Bilder/facebook.png" alt="facebook" width="25px" height="25px"> <Span class="space"></Span><img src="Bilder/instagram.png" alt="facebook" width="25px" height="25px"><Span class="space"></Span><img src="Bilder/twitter.png" alt="facebook" width="25px" height="25px"></div>
+            <div>&copy; [2023] [Drive Deal].Alle Rechte vorbehalten<br>Datenschutz | Datenschutzeinstellungen | Impressum</div>
+        </footer>
+    </body>
+</html>
