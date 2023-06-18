@@ -191,14 +191,19 @@ h1{
     width: 300px;
     height: 200px;
 }
-/* #photoContainer .img2{
-    filter: hue-rotate(-100deg);
-} */
+ /* #photoContainer .img2{
+    filter: hue-rotate(-190deg);
+}  */
+.d1{
+border: 2px solid red;
+height: 100px;
+display: flex;
+}
 .coll{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 2px solid white;
 }
 .coll1{
     background-color: #135b23;/*filter: hue-rotate(-100deg); */
@@ -208,6 +213,14 @@ h1{
 }
 .coll3{
     background-color: #789ac7;
+}
+#photoContainer .img3{
+    position: relative;
+    width: 140px;
+    height: 80px;
+    left: 26%;
+    top: 70px;
+   
 }
 #kik{
     display: none;

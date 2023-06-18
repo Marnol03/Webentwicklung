@@ -96,7 +96,7 @@ for (var i = 0; i < radioElements.length; i++) {
       } else {
 
         imgElement1 = document.createElement('img');
-        imgElement1.className = '.img2';
+        imgElement1.className = 'img2';
         imgElement1.src = imageURL;
         imgElement1.alt = 'Image1 sélectionnée';
         photoContainer.appendChild(imgElement1);
@@ -104,11 +104,27 @@ for (var i = 0; i < radioElements.length; i++) {
     }
   });
 }
-var coll1 = document.getElementById('coll1');
-coll1.addEventListener("click", function(){
-  coll1.style.backgroundColor='red';
-  imgElement1.style.filter='hue-rotate(-100deg)'
-}); 
+ var coll1 = document.getElementById('coll1');
+ coll1.addEventListener("click", function(){
+  coll1.style.borderColor='green';
+  coll2.style.borderColor='white';
+  coll3.style.borderColor='white';
+   imgElement1.style.filter='hue-rotate(-100deg)';
+ }); 
+ var coll2 = document.getElementById('coll2');
+ coll2.addEventListener("click", function(){
+    coll2.style.borderColor='green';
+    coll3.style.borderColor='white';
+    coll1.style.borderColor='white';
+   imgElement1.style.filter='hue-rotate(-190deg)';
+ });
+ var coll3 = document.getElementById('coll3');
+ coll3.addEventListener("click", function(){
+  coll3.style.borderColor='green';
+  coll2.style.borderColor='white';
+  coll1.style.borderColor='white';
+   imgElement1.style.filter='hue-rotate(0deg)';
+ });
 
 
 var radioElements = document.getElementsByName('check2');
