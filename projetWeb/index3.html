@@ -15,7 +15,7 @@
         <div class="name" ><span>D</span>rive<span>D</span>eal</div>
         <ul class="nav">
             <li><a href="home.html" ><i class="fa-solid fa-house"></i>Home</a></li>
-            <li><a href="index.html"><i class="fa-sharp fa-solid fa-hammer-war"></i>Customizer</a></li>
+            <li><a href="index.html" ><i class="fa-sharp fa-solid fa-hammer-war"></i>Customizer</a></li>
             <li><a href="warenkorp.html"><i class="fa-solid fa-cart-shopping"></i>Warenkorb</a></li>
             <li><a href="form.html" class="hilfe">Hilfe?</a></li>
             <li><a href="#">Über uns</a></li>
@@ -40,51 +40,95 @@
 
     <section class="box">
         <div class="bild">
-          <p>Roues</p>
-          <img src="bild/r1v1.jpeg" alt="roue" id="roue">
-          <div class="liste-cachee" id="liste-roues">
-            <img src="bild/r1v1.jpeg" alt="New roue 1" class="photo">
-            <img src="bild/r2v2.PNG" alt="New roue 2" class="photo">
-            <img src="bild/r3v3.PNG" alt="New roue 3" class="photo">
-          </div>
-          <p>Portieres</p>
-          <img src="bild/p1v1.jpeg" alt="siege" id="siege">
-          <div class="liste-cachee" id="liste-sieges">
-            <img src="bild/p1v1.jpeg" alt="New siege 1" class="photo">
-            <img src="bild/p1v2.jpeg" alt="New siege 2" class="photo">
-            <img src="bild/p3v3.PNG" alt="New siege 3" class="photo">
-          </div>
-          <p>Parechoc</p>
-          <img src="bild/haus2.jpg" alt="parechoc" id="parechoc">
-          <div class="liste-cachee" id="liste-parechocs">
-            <img src="bild/haus3.jpg" alt="New parechoc 1" class="photo">
-            <img src="bild/haus2.jpg" alt="New parechoc 2" class="photo">
-            <img src="bild/haus6.jpg" alt="New parechoc 3" class="photo">
-          </div> 
-        </div>
+            <div class="list_m">
+                <div id="roue" >
+                    <p >Roues </p>
+                    <!--<img src="bild/r1v1.jpeg" alt="roue" id="roue" width="10px" height="10px">-->
+                </div>
+                <div id="siege" >
+                    <p>Portieres</p>
+                    <!--<img src="bild/p1v1.jpeg" alt="siege" id="siege">-->
+                </div>
+                <div id="parechoc">
+                    <p>Parechoc</p>
+                    <!--<img src="bild/haus2.jpg" alt="parechoc" id="parechoc">-->
+                </div>
+            </div>
+            <div class="liste-cachee" id="liste-roues">
+                <label class="option_item" for="p1">
+                    <input class="checkbox" type="radio" name="check" value="p1" id="p1">
+                    <span class="option_inner dick"><img src="bild/r1v1.jpeg" alt="New roue 1" class="photo"><div class="bschreib">roue1</div></span>
+                </label>
+                <label class="option_item" for="p3">
+                    <input class="checkbox" type="radio" name="check" value="p3" id="p3">
+                    <span class="option_inner dick"><img src="bild/r2v2.PNG" alt="New roue 2" class="photo"><div class="bschreib">roue2</div></span>
+                </label>
+                <label class="option_item" for="p2">
+                    <input class="checkbox" type="radio" name="check" value="p2" id="p2">
+                    <span class="option_inner dick"><img src="bild/r3v3.PNG" alt="New roue 3" class="photo"><div class="bschreib">roue3 </div></span>
+                </label>
+                <!--<span class="dick"><img src="bild/r1v1.jpeg" alt="New roue 1" class="photo"></span>
+                <span class="dick"><img src="bild/r2v2.PNG" alt="New roue 2" class="photo"></span>
+                <span class="dick"><img src="bild/r3v3.PNG" alt="New roue 3" class="photo"></span>-->
+            </div>
+            <div class="liste-cachee" id="liste-sieges">
+                <!--<span class="dick"><img src="bild/p1v1.jpeg" alt="New siege 1" class="photo"></span>
+                <span class="dick"><img src="bild/p1v2.jpeg" alt="New siege 2" class="photo"></span>
+                <span class="dick"><img src="bild/p3v3.PNG" alt="New siege 3" class="photo"></span>-->
+                <label class="option_item" for="s1">
+                    <input class="checkbox" type="radio" name="check1" value="s1" id="s1">
+                    <span class="option_inner dick"><img src="bild/p1v1.jpeg" alt="New siege 1" class="photo"><div class="bschreib">roue1</div></span>
+                </label>
+                <label class="option_item" for="s3">
+                    <input class="checkbox" type="radio" name="check1" value="s3" id="s3">
+                    <span class="option_inner dick"><img src="bild/p1v2.jpeg" alt="New siege 2" class="photo"><div class="bschreib">roue2</div></span>
+                </label>
+                <label class="option_item" for="s2">
+                    <input class="checkbox" type="radio" name="check1" value="s2" id="s2">
+                    <span class="option_inner dick"><img src="bild/p3v3.PNG" alt="New siege 3" class="photo"><div class="bschreib">roue3 </div></span>
+                </label>
+            </div>
+            <div class="liste-cachee" id="liste-parechocs">
+                <!--<span class="dick"><img src="bild/haus3.jpg" alt="New parechoc 1" class="photo"></span>
+                <span class="dick"><img src="bild/haus2.jpg" alt="New parechoc 2" class="photo"></span>
+                <span class="dick"><img src="bild/haus6.jpg" alt="New parechoc 3" class="photo"></span>-->
+                <label class="option_item" for="r1">
+                    <input class="checkbox" type="radio" name="check1" value="r1" id="r1">
+                    <span class="option_inner dick"><img src="bild/haus3.jpg" alt="New parechoc 1" class="photo"><div class="bschreib">roue1</div></span>
+                </label>
+                <label class="option_item" for="r3">
+                    <input class="checkbox" type="radio" name="check1" value="r3" id="r3">
+                    <span class="option_inner dick"><img src="bild/haus2.jpg" alt="New parechoc 2" class="photo"><div class="bschreib">roue2</div></span>
+                </label>
+                <label class="option_item" for="r2">
+                    <input class="checkbox" type="radio" name="check1" value="r2" id="r2">
+                    <span class="option_inner dick"><img src="bild/haus6.jpg" alt="New parechoc 3" class="photo"><div class="bschreib">roue3 </div></span>
+                </label>
+            </div> 
 
+        </div>
         <div class="auto">
             <img src="bild/v1.png" alt="New parechoc 1" class="photos">
             <img src="bild/v2.PNG" alt="New parechoc 2" class="photos">
             <img src="bild/v3.jpeg" alt="New parechoc 2" class="photos">
         </div>
+        <div class="auto_box">
+            <div id="box3" class="autos">
+                <p>AUTO</p>
+            </div>
 
-        <div id="box3" class="autos">
-            <p>AUTO</p>
+            <div class="beschreibung">
+                <div id="auto1" class="auto1">
+                    <p>Preis: 3000€, Voiture de luxe</p>
+                </div>
+                <div id="auto2" class="auto2">
+                    <p>Preis: 4000€, Voiture de sport</p>
+                </div>
+                <div id="auto3" class="auto3">
+                    <p>Preis: 5000€, Voiture de course</p>
+                </div>
+            </div>
         </div>
-
-        <div class="beschreibung">
-            <div id="auto1" class="auto1">
-                <p>Preis: 3000€, Voiture de luxe</p>
-            </div>
-            <div id="auto2" class="auto2">
-                <p>Preis: 4000€, Voiture de sport</p>
-            </div>
-            <div id="auto3" class="auto3">
-                <p>Preis: 5000€, Voiture de course</p>
-            </div>
-        </div>
-
     </section>
         
     <p><a href="warenkorp.html?selectedImage=" class="war" id="warenkorbLink">Zum Warenkorb</a></p>    
