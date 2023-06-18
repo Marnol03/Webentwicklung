@@ -1,35 +1,32 @@
-let toggle = document.querySelector(".toggle")
+ let toggle = document.querySelector(".toggle")
 let body = document.querySelector("body")
  
 toggle.addEventListener('click',function()
   {
-    body.classList.toggle('open')
-  }
-)
+   body.classList.toggle('open')
+   }
+ )
 
 
-var roue = document.getElementById('roue');
-var listePhotos = document.getElementById('liste-roues');
-var siege = document.getElementById('siege');
-var listeBild = document.getElementById('liste-sieges');
-var parechoc = document.getElementById('parechoc');
-var listeBilder = document.getElementById('liste-parechocs');
-
+  var roue = document.getElementById('roue');
+ var listePhotos = document.getElementById('liste-roues');
+ var siege = document.getElementById('siege');
+ var listeBild = document.getElementById('liste-sieges');
+ var parechoc = document.getElementById('parechoc');
+ var listeBilder = document.getElementById('liste-parechocs');
 
 roue.addEventListener('click', function() 
   {
     if (listePhotos.style.display === 'none')
-    {
-      listeBilder.style.display = 'none'
-      listeBild.style.display = 'none'
-      listePhotos.style.display = 'flex';
-    } else {
+     {
+       listeBilder.style.display = 'none'
+       listeBild.style.display = 'none'
+       listePhotos.style.display = 'flex';
+      } else {
       listePhotos.style.display = 'none';
     }
   }
 );
-
-
 siege.addEventListener("click", function() 
   {
     if (listeBild.style.display === 'none') {
@@ -41,134 +38,102 @@ siege.addEventListener("click", function()
         listeBild.style.display = 'none';
     }
   }
-);
-
-
+ );
 parechoc.addEventListener("click", function() 
   {
     if (listeBilder.style.display === 'none') 
     {
-      listePhotos.style.display = 'none';
-      listeBild.style.display = 'none'
-      listeBilder.style.display = 'flex';
+     listePhotos.style.display = 'none';
+     listeBild.style.display = 'none'
+     listeBilder.style.display = 'flex';
     } 
     else {
-      listeBilder.style.display = 'none';
+     listeBilder.style.display = 'none';
     }
   }
 );
+var radioElements = document.getElementsByName('check');
+var photoContainer = document.getElementById('photoContainer');
+var coch = document.getElementById('kik');
+var imgElement = document.querySelector('.img1');
 
-var index = 0;
-var photos = document.querySelectorAll('.photo');
-for (var i = 0; i < photos.length; i++) 
-{
-  photos[i].addEventListener('click', function(event)
-  {
-    event.stopPropagation();
-    var selectedPhoto = document.querySelector('.selected');
-    
-    if (selectedPhoto) {
-      selectedPhoto.classList.remove('selected');
+for (var i = 0; i < radioElements.length; i++) {
+  radioElements[i].addEventListener('change', function() {
+
+    if (this.checked) {
+      var imageURL = this.parentElement.querySelector('.photo').src;
+      coch.style.display = 'block';
+
+      if (imgElement) {
+
+        imgElement.src = imageURL;
+      } else {
+
+        imgElement = document.createElement('img');
+        imgElement.className = 'img1';
+        imgElement.src = imageURL;
+        imgElement.alt = 'Image sélectionnée';
+        photoContainer.appendChild(imgElement);
+      }
     }
-    event.target.classList.add('selected');
-    var photoSrc = event.target.src;
+  });
+}
+var radioElements = document.getElementsByName('check1');
+var coch1 = document.getElementById('kik1');
+var imgElement1 = document.querySelector('.img2');
+var photoContainer = document.getElementById('photoContainer');
 
-            
-    // Vérifier si la photo a déjà été ajoutée
-    var isPhotoAdded = selectedPhotos.includes(photoSrc);
-    if (!isPhotoAdded) {
-      selectedPhotos.push(photoSrc);
-            
-      // Ajouter la voiture correspondante dans selectedCars
-      var carIndex = selectedPhotos.length - 1;
-      var carElement = document.querySelectorAll('.auto .photos')[carIndex];
-      var carSrc = carElement.src;
-      selectedCars.push(carSrc);
+for (var i = 0; i < radioElements.length; i++) {
+  radioElements[i].addEventListener('change', function() {
 
-      // Vérifier si les 3 premières images sont sélectionnées dans chaque liste
-      if (selectedPhotos.length === 3) 
-      {
-      //var index = 0;
-        if ((selectedPhotos[0] === document.querySelector('#liste-roues img:nth-child(1)').src )&&
-            selectedPhotos[1] === document.querySelector('#liste-sieges img:nth-child(1)').src &&
-            selectedPhotos[2] === document.querySelector('#liste-parechocs img:nth-child(1)').src) {
-          index = 0;
-        }
-        else if (selectedPhotos[0] === document.querySelector('#liste-roues img:nth-child(2)').src &&
-                  selectedPhotos[1] === document.querySelector('#liste-sieges img:nth-child(2)').src &&
-                  selectedPhotos[2] === document.querySelector('#liste-parechocs img:nth-child(2)').src) {
-              index = 1;
-        } else if (selectedPhotos[0] === document.querySelector('#liste-roues img:nth-child(3)').src &&
-                  selectedPhotos[1] === document.querySelector('#liste-sieges img:nth-child(3)').src &&
-                  selectedPhotos[2] === document.querySelector('#liste-parechocs img:nth-child(3)').src) {
-              index = 2;
-        }
+    if (this.checked) {
+      var imageURL = this.parentElement.querySelector('.photo').src;
+      coch1.style.display = 'block';
 
-        // Réinitialiser les photos sélectionnées
-        selectedPhotos = [];
-        selectedCars = [];
+      if (imgElement1) {
 
-        // Sélectionner la voiture correspondante et l'ajouter dans le box3
-        var selectedCar = document.querySelectorAll('.auto .photos')[index];
-        var selectedCarSrc = selectedCar.src;
-        selectedCars.push(selectedCarSrc);
-        updateBox3(); // Mettre à jour le contenu du box3
-      }        
+        imgElement1.src = imageURL;
+      } else {
+
+        imgElement1 = document.createElement('img');
+        imgElement1.className = '.img2';
+        imgElement1.src = imageURL;
+        imgElement1.alt = 'Image1 sélectionnée';
+        photoContainer.appendChild(imgElement1);
+      }
+    }
+  });
+}
+var coll1 = document.getElementById('coll1');
+coll1.addEventListener("click", function(){
+  coll1.style.backgroundColor='red';
+  imgElement1.style.filter='hue-rotate(-100deg)'
+}); 
+
+
+var radioElements = document.getElementsByName('check2');
+var coch2 = document.getElementById('kik2');
+var imgElement2 = document.querySelector('.img3');
+
+for (var i = 0; i < radioElements.length; i++) {
+  radioElements[i].addEventListener('change', function() {
+
+    if (this.checked) {
+      var imageURL = this.parentElement.querySelector('.photo').src;
+      coch2.style.display = 'block';
+
+      if (imgElement2) {
+
+        imgElement2.src = imageURL;
+      } else {
+
+        imgElement2 = document.createElement('img');
+        imgElement2.className = 'img3';
+        imgElement2.src = imageURL;
+        imgElement2.alt = 'Image2 sélectionnée';
+        photoContainer.appendChild(imgElement2);
+      }
     }
   });
 }
 
-var selectedPhotos = [];
-var selectedCars = [];
-
-var selectedPhoto = document.getElementById('selectedPhoto');
-selectedPhoto.addEventListener('click', function() 
-  {
-    // Réinitialiser les photos affichées dans le box1
-    selectedPhoto.innerHTML = '';
-  }
-);
-        
-function cancelSelection() {
-    selectedPhotos = []; // Réinitialiser les photos sélectionnées
-    selectedCars = []; // Réinitialiser les voitures sélectionnées
-    selectedPhoto.innerHTML = ''; // Effacer les photos affichées dans le box1
-} 
-        
-function updateBox3() 
-{
-  var box3 = document.getElementById('box3');
-  box3.innerHTML = '<p>AUTO</p>';
-
-  // Afficher la voiture sélectionnée dans le "box3"
-  for (var i = 0; i < selectedCars.length; i++) {
-    var carElement = document.createElement('img');
-    carElement.src = selectedCars[selectedCarIndex];
-    carElement.src = selectedCars[i];
-    carElement.alt = 'Selected Car ' + i;
-    carElement.className = 'photos';
-    box3.appendChild(carElement);
-  }
-
-  var selectedCarIndex = index;
-  if (selectedCarIndex === 0) { // si c'est la première image de "auto"
-    var auto1Content = document.getElementById('auto1').innerHTML; // récupérer le contenu de "auto1" de "beschreigung"
-    box3.innerHTML += auto1Content; // ajouter le contenu de "auto1" dans le "box3"
-  } else if (selectedCarIndex === 1) { // si c'est la deuxième image de "auto"
-    var auto2Content = document.getElementById('auto2').innerHTML; // récupérer le contenu de "auto2" de "beschreigung"
-    box3.innerHTML += auto2Content; // ajouter le contenu de "auto2" dans le "box3"
-  } else if (selectedCarIndex === 2) { // si c'est la troisième image de "auto"
-    var auto3Content = document.getElementById('auto3').innerHTML; // récupérer le contenu de "auto3" de "beschreigung"
-    box3.innerHTML += auto3Content; // ajouter le contenu de "auto3" dans le "box3"
-  }
-
-  // Mettre à jour le lien du bouton "Zum Warenkorb"
-  var warenkorbLink = document.getElementById('warenkorbLink');
-  if (selectedCars.length > 0) {
-    var selectedCarSrc = selectedCars[selectedCars.length - 1];
-    var selectedImageIndex = selectedCars.length - 1;
-    warenkorbLink.href = 'warenkorp.html?selectedImage=' + encodeURIComponent(selectedCarSrc) + '&selectedImageIndex=' + selectedImageIndex;
-  } else {
-    warenkorbLink.href = 'warenkorp.html';
-  }
-}

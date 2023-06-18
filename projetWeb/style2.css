@@ -12,8 +12,8 @@ header{
     display: flex;
     justify-content: space-between;
     top:0;
-    color:black;
-  
+    color:white;
+    background-color: #3E3BC0;
 }
 .toggle{
     display: block;
@@ -71,10 +71,10 @@ header{
 }
 h1{
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 .name span{
-    color: #3E3BC0;
+    color: #fff;
     font-weight: bold;
     font-size: 3em;
  }
@@ -113,6 +113,7 @@ h1{
     overflow: hidden;
     /*border: 2px solid #333;*/
     margin: 0 auto;
+    z-index: 0;
 }
 
 .bild{
@@ -134,6 +135,9 @@ h1{
     border-bottom: 2px solid blue;
     border-top: 2px solid blue;
 }
+#roue p{
+    display: flex;
+}
 #roue{
     display: flex;
     justify-content: center;
@@ -143,6 +147,9 @@ h1{
 #roue:hover{
     background-color: antiquewhite;
 }
+#siege p{
+    display: flex;
+}
 #siege{
     display: flex;
     justify-content: center;
@@ -151,6 +158,9 @@ h1{
 }
 #siege:hover{
     background-color: antiquewhite;
+}
+#parechoc p{
+    display: flex;
 }
 #parechoc{
     display: flex;
@@ -164,12 +174,86 @@ h1{
 .box img{
     cursor: pointer;
 }
-
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+#photoContainer{
+    overflow: hidden;
+    display: flex;
+    width: 300px;
+    height: 200px;
+    background-color: #090909;
+}
+#photoContainer img{
+    position:absolute;
+    width: 300px;
+    height: 200px;
+}
+/* #photoContainer .img2{
+    filter: hue-rotate(-100deg);
+} */
+.coll{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.coll1{
+    background-color: #135b23;/*filter: hue-rotate(-100deg); */
+}
+.coll2{
+    background-color: #78725b;/*filter: hue-rotate(-190deg); */
+}
+.coll3{
+    background-color: #789ac7;
+}
+#kik{
+    display: none;
+    font-size: 20px;
+    top: -100px
+}
+#kik1{
+    display: none;
+    font-size: 20px;
+    top: -100px
+}
+#kik2{
+    display: none;
+    font-size: 20px;
+    top: -100px
+}
+.box .down-arrow{
+    margin-left:40%;
+    animation: blink 1s infinite;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    color: rgb(1, 1, 1);
+    border-radius: 7px;
+    box-shadow: 8px 8px 5px rgb(85, 87, 241);
+    background-color: #f3f5f9;
+}
+.main img:nth-child(1){
+   width: 80%;
+   height: 80%;
+}
+.main img:nth-child(2){
+    background-color: blue;
+}
+.main p{
+    margin-left: 20px;
+    margin-right: 10px;
+}
 .liste-cachee {
     display: none;
     position:relative;
     width: 100%;
-    margin: 0px;
     text-align: center;
     overflow: auto;
     white-space: nowrap;
@@ -183,9 +267,13 @@ h1{
     margin: 0px 5px;
     padding: 0px;
 }
+
 .checkbox:checked ~ .option_inner{
-    border:5px solid green;
-   
+    border:5px solid green;  
+}
+.checkbox{
+    position: absolute;
+    display: none;
 }
 .dick{
     display: inline-block;
@@ -198,9 +286,22 @@ h1{
     position:relative;
 }
 .croix{
-    border: 2px solid ;
-    width: 20px;
-    height: 20px;
+    top:-1px;
+    left:-1px;
+    position: absolute;
+    border: 20px solid ;
+    border-color: green transparent transparent  green;
+}
+.croix:before{
+    content: "";
+    position: absolute;
+    top:-18px;
+    left:-16px;
+    width: 15px;
+    height: 5px;
+    border: 3px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
 }
 .auto_box{
     margin: 20px;
@@ -216,6 +317,7 @@ h1{
     position: absolute;
 } 
 #selectedPhoto {
+    width: 200px;
     text-align: center;
     margin: 10px;
     cursor: pointer;
@@ -223,8 +325,8 @@ h1{
 }
     
 #selectedImg, #selectedPhoto img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
 }
     
 #cancelButton {
