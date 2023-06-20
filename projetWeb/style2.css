@@ -184,32 +184,29 @@ h1{
     display: flex;
     width: 300px;
     height: 200px;
-    background-color: #090909;
 }
 #photoContainer img{
     position:absolute;
     width: 300px;
     height: 200px;
 }
- /* #photoContainer .img2{
-    filter: hue-rotate(-190deg);
-}  */
 .d1{
-border: 2px solid red;
-height: 100px;
-display: flex;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
 .coll{
     width: 30px;
     height: 30px;
+    margin:2%;
     border-radius: 50%;
     border: 2px solid white;
 }
 .coll1{
-    background-color: #135b23;/*filter: hue-rotate(-100deg); */
+    background-color: #135b23;
 }
 .coll2{
-    background-color: #78725b;/*filter: hue-rotate(-190deg); */
+    background-color: #78725b;
 }
 .coll3{
     background-color: #789ac7;
@@ -219,8 +216,7 @@ display: flex;
     width: 140px;
     height: 80px;
     left: 26%;
-    top: 70px;
-   
+    top: 70px;  
 }
 #kik{
     display: none;
@@ -255,9 +251,6 @@ display: flex;
 .main img:nth-child(1){
    width: 80%;
    height: 80%;
-}
-.main img:nth-child(2){
-    background-color: blue;
 }
 .main p{
     margin-left: 20px;
@@ -317,15 +310,15 @@ display: flex;
     transform: rotate(-45deg);
 }
 .auto_box{
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height:auto;
     background-color: aquamarine;
-    white-space: nowrap;
 }
 .dick:hover{
     box-shadow: 8px 8px 4px rgba(30, 27, 27, 0.5);
 } 
-
 .checkbox{
     position: absolute;
 } 
@@ -335,21 +328,7 @@ display: flex;
     margin: 10px;
     cursor: pointer;
     justify-content: center;
-}
-    
-#selectedImg, #selectedPhoto img {
-    max-width: 200px;
-    max-height: 200px;
-}
-    
-#cancelButton {
-    margin-top: 5px;
-}
-    
-.selected {
-    border: 3px solid red;
-}
-      
+}   
 .war{
     border:none;
     color: white;
@@ -368,24 +347,16 @@ p .war{
 .war:hover{
     transform: scale(1.07);
 }
-
 .autos{
     display: flex;
     padding: 100px;
 }
-
 .auto{
     display: none;
 }
 .auto img, .autos img{
     width: 100px;
     height: 100px;
-}
-#box3{
-    display: grid;
-    grid-gap: 10px;
-    place-items: center;
-    padding: 10px;
 }
 .bild img{
     margin-bottom:10px ;
@@ -396,7 +367,6 @@ p .war{
 .beschreibung ul li{
     list-style-type: none;
 }
-
 footer{
     text-align: center;
     color: white;
@@ -457,7 +427,6 @@ i{
         width: auto;
         margin: 10px 0px 0px 0px;
         padding: 0px;
-       /* background-color: yellowgreen;*/ 
     }
     .nav a{
         display: flex;
@@ -467,7 +436,6 @@ i{
         margin-right: -30px;
         color: black;
         font-size: 16px;
-
     }
     .nav a:hover{
         background-color: #5856ae;
