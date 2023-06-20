@@ -1,4 +1,4 @@
- let toggle = document.querySelector(".toggle")
+let toggle = document.querySelector(".toggle")
 let body = document.querySelector("body")
  
 toggle.addEventListener('click',function()
@@ -89,7 +89,6 @@ for (var i = 0; i < radioElements.length; i++) {
     if (this.checked) {
       var imageURL = this.parentElement.querySelector('.photo').src;
       coch1.style.display = 'block';
-
       if (imgElement1) {
 
         imgElement1.src = imageURL;
@@ -112,19 +111,19 @@ for (var i = 0; i < radioElements.length; i++) {
    imgElement1.style.filter='hue-rotate(-100deg)';
  }); 
  var coll2 = document.getElementById('coll2');
- coll2.addEventListener("click", function(){
-    coll2.style.borderColor='green';
-    coll3.style.borderColor='white';
-    coll1.style.borderColor='white';
-   imgElement1.style.filter='hue-rotate(-190deg)';
- });
- var coll3 = document.getElementById('coll3');
- coll3.addEventListener("click", function(){
+coll2.addEventListener("click", function(){
+  coll2.style.borderColor='green';
+  coll3.style.borderColor='white';
+  coll1.style.borderColor='white';
+  imgElement1.style.filter='hue-rotate(-190deg)';
+});
+var coll3 = document.getElementById('coll3');
+  coll3.addEventListener("click", function(){
   coll3.style.borderColor='green';
   coll2.style.borderColor='white';
   coll1.style.borderColor='white';
-   imgElement1.style.filter='hue-rotate(0deg)';
- });
+  imgElement1.style.filter='hue-rotate(0deg)';
+});
 
 
 var radioElements = document.getElementsByName('check2');
@@ -152,4 +151,13 @@ for (var i = 0; i < radioElements.length; i++) {
     }
   });
 }
+var element = document.getElementById('warenkorbLink')
+if(coch.style.display == coch1.style.display == coch2.style.display){
+  element.style.display='block';
+}
+var auto1 = document.getElementById('auto1');
+// auto1.style.display='block';
 
+if(imgElement1.src === element.src ){
+  auto1.style.display='block';
+}
