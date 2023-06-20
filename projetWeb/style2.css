@@ -314,7 +314,7 @@ h1{
     flex-direction: column;
     align-items: center;
     height:auto;
-    background-color: aquamarine;
+    background-color: rgb(6, 6, 6);
 }
 .dick:hover{
     box-shadow: 8px 8px 4px rgba(30, 27, 27, 0.5);
@@ -338,34 +338,30 @@ h1{
     padding: 10px 20px;
     margin:20px;
     transition: transform 1s;
-}
-p .war{
+    /* display: none; */
     position: relative;
     place-content: center;    
     left: 20%;
 }
+
 .war:hover{
     transform: scale(1.07);
-}
-.autos{
-    display: flex;
-    padding: 100px;
-}
-.auto{
-    display: none;
-}
-.auto img, .autos img{
-    width: 100px;
-    height: 100px;
 }
 .bild img{
     margin-bottom:10px ;
 }
 .beschreibung{
+    background-color: #fff;
+    width: 100%;
+}
+.auto1{
     display: none;
 }
-.beschreibung ul li{
-    list-style-type: none;
+.auto2{
+    display: none;
+}
+.auto3{
+    display: none;
 }
 footer{
     text-align: center;
@@ -409,8 +405,7 @@ i{
 }
 .foot .lien-icone{
     align-items: center;
-    padding: 5px;
-    
+    padding: 5px;   
 }
 
 @media screen and (min-width:667px){
@@ -453,13 +448,11 @@ i{
     header{
         padding-bottom: 0px;
         margin-bottom: -30px;
-
     }
     hr{
         border: 1px solid black;
         margin-bottom: 50px;
     }
-
     footer{
         width: 100%;
         position: relative;
@@ -476,7 +469,6 @@ i{
     footer .foot:nth-child(3){
         display: flex;
         flex-direction: column;
-
     }
     footer .lo{
         margin-top: 20px;
@@ -494,6 +486,5 @@ i{
         flex-direction: column;
         margin: 20px 40% 20px 0 ;
         align-items: center;
-    }
-    
+    } 
 }
