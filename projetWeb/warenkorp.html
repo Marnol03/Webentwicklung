@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Warenkorp</title>
         <link rel="stylesheet" type="text/css" href="warenkorp.css">
+        <link rel="stylesheet" type="text/css" href="bezahlen.css">
+        <script src="script0.js" defer></script>
+
         <script type="module" src="script1.js"></script>
     </head>
 
@@ -25,39 +28,57 @@
                 <i class="fa-sharp fa-solid fa-bars ouvrir" ></i>
                 <i class="fa-solid fa-circle-xmark fermer" ></i>
             </div>
-            
+           
         </header>
         <hr>
         <div class="auto"></div>
-            <section class="menu"> 
-                <div class="bezahlen">
-                  <h2 id="section2">Jetzt bezahlen</h2>
-                  <div id="moyens-paiement" >
-                    <h3>Moyens de paiement :</h3>
-                    <ul>
-                      <li>✅Carte de crédit</li>
-                      <li>✅PayPal</li>
-                      <li>✅Carte visa</li>
-                    </ul>
-                  </div>
-                  <div id="choix-paiement">
-                    <!-- Formulaire de choix du moyen de paiement -->
-                    <h3>Wählen Sie bitte die Art der Bezahlung:</h3>
-                    <form>
-                      <label>
-                        <input type="radio" name="moyen-paiement" value="carte-credit"> Carte de crédit
-                      </label>
-                      <label>
-                        <input type="radio" name="moyen-paiement" value="paypal"> PayPal
-                      </label>
-                      <label>
-                        <input type="radio" name="moyen-paiement" value="carte-visa"> Carte visa
-                      </label>
-                      <button type="submit">auswählen</button>
-                    </form>
-                  </div>
-                </div>              
-              </section>        
+          
+                </div>
+                <button class="bezahlen" align="center"> bezahlen</button>
+              
+              </section> 
+              <div class="backgroundfenster">
+                <div class="bezahlenfenster">
+                    <h1 align="center">Bezahlen</h1>
+                        <div class="zahlunsmethode">
+                            <h2 >zahlunsmethode</h2>
+                           <div class="bloc">
+                            <input type="radio" name="methode" id="paypal" value="paypal" checked>
+                            <label for="paypal"> <img src="Webprojekt/paypal-icon.jpeg" alt="paypal-icon"> paypal</label><br>
+                                <p> Zum Abschluss dieser Transaktion wirst du auf die sicheren Server von PayPal weitergeleitet. </p>
+                           </div>
+                            <div class="bloc">
+                                <input type="radio" name="methode" id="kredit-/Debitkarte" value="kredit-/Debitkarte">
+                            <label for="kredit-/Debitkarte"> <img src="Webprojekt/visa-icon.png" alt="visa-icon"> <img src="Webprojekt/308px-maestro_2016-svg.png" alt="maestro"> kredit-/Debitkarte</label><br>
+                        <!-- <div class="info">
+                            essai
+                            <label for="name" >Name auf der Karte</label>
+                            <input type="text"  id="name" aria-placeholder="Name auf der Karte">
+                        </div> -->
+        
+                        </div>
+                        <div class="info">
+                         
+                            <label for="name" >Name auf der Karte</label>
+                            <input type="text"  id="name" aria-placeholder="Name auf der Karte"><br><br>
+                            <label for="karte" >kartennummer</label>
+                            <input type="text"  id="karte" aria-placeholder="1234 5678 9012 3456"><br>
+                        </div>
+                        </div>
+                        
+                        <div class="ubesicht">
+                            <h2>Übersicht</h2>
+                            
+                            <span><a href="warenkorp.html">zurück</a></span>
+                            <div class="Abschluss">
+                                <button >Bezahlung abschließen</button>
+                            </div>
+                        </div>
+        
+                      </div>
+        
+        
+              </div>       
 
         <footer>
             <div class="foot">Unsere Service<br>
@@ -93,8 +114,11 @@
             </div>
             <div class="foot">&copy; [2023] [Drive Deal].Alle Rechte vorbehalten<br>Datenschutz | Datenschutzeinstellungen | Impressum</div>
         
-            <footer>
+        </footer>
+
     </body>
 
 </html>
+
+
 
