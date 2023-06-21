@@ -1,6 +1,5 @@
- let toggle = document.querySelector(".toggle")
+let toggle = document.querySelector(".toggle")
 let body = document.querySelector("body")
- 
 toggle.addEventListener('click',function()
   {
    body.classList.toggle('open')
@@ -8,12 +7,12 @@ toggle.addEventListener('click',function()
  )
 
 
-  var roue = document.getElementById('roue');
- var listePhotos = document.getElementById('liste-roues');
- var siege = document.getElementById('siege');
- var listeBild = document.getElementById('liste-sieges');
- var parechoc = document.getElementById('parechoc');
- var listeBilder = document.getElementById('liste-parechocs');
+var roue = document.getElementById('roue');
+var listePhotos = document.getElementById('liste-roues');
+var siege = document.getElementById('siege');
+var listeBild = document.getElementById('liste-sieges');
+var parechoc = document.getElementById('parechoc');
+var listeBilder = document.getElementById('liste-parechocs');
 
 roue.addEventListener('click', function() 
   {
@@ -59,16 +58,14 @@ var imgElement = document.querySelector('.img1');
 
 for (var i = 0; i < radioElements.length; i++) {
   radioElements[i].addEventListener('change', function() {
-
+    
     if (this.checked) {
       var imageURL = this.parentElement.querySelector('.photo').src;
       coch.style.display = 'block';
-
       if (imgElement) {
 
         imgElement.src = imageURL;
       } else {
-
         imgElement = document.createElement('img');
         imgElement.className = 'img1';
         imgElement.src = imageURL;
@@ -94,7 +91,6 @@ for (var i = 0; i < radioElements.length; i++) {
 
         imgElement1.src = imageURL;
       } else {
-
         imgElement1 = document.createElement('img');
         imgElement1.className = 'img2';
         imgElement1.src = imageURL;
@@ -104,28 +100,6 @@ for (var i = 0; i < radioElements.length; i++) {
     }
   });
 }
- var coll1 = document.getElementById('coll1');
- coll1.addEventListener("click", function(){
-  coll1.style.borderColor='green';
-  coll2.style.borderColor='white';
-  coll3.style.borderColor='white';
-   imgElement1.style.filter='hue-rotate(-100deg)';
- }); 
- var coll2 = document.getElementById('coll2');
- coll2.addEventListener("click", function(){
-    coll2.style.borderColor='green';
-    coll3.style.borderColor='white';
-    coll1.style.borderColor='white';
-   imgElement1.style.filter='hue-rotate(-190deg)';
- });
- var coll3 = document.getElementById('coll3');
- coll3.addEventListener("click", function(){
-  coll3.style.borderColor='green';
-  coll2.style.borderColor='white';
-  coll1.style.borderColor='white';
-   imgElement1.style.filter='hue-rotate(0deg)';
- });
-
 
 var radioElements = document.getElementsByName('check2');
 var coch2 = document.getElementById('kik2');
@@ -134,22 +108,52 @@ var imgElement2 = document.querySelector('.img3');
 for (var i = 0; i < radioElements.length; i++) {
   radioElements[i].addEventListener('change', function() {
 
-    if (this.checked) {
-      var imageURL = this.parentElement.querySelector('.photo').src;
-      coch2.style.display = 'block';
+    if(imgElement && imgElement1)
+    {
+      if (this.checked) {
+        var imageURL = this.parentElement.querySelector('.photo').src;
+        coch2.style.display = 'block';
 
-      if (imgElement2) {
+        if (imgElement2) {
 
-        imgElement2.src = imageURL;
-      } else {
-
-        imgElement2 = document.createElement('img');
-        imgElement2.className = 'img3';
-        imgElement2.src = imageURL;
-        imgElement2.alt = 'Image2 sélectionnée';
-        photoContainer.appendChild(imgElement2);
+          imgElement2.src = imageURL;
+        } else {
+          imgElement2 = document.createElement('img');
+          imgElement2.className = 'img3';
+          imgElement2.src = imageURL;
+          imgElement2.alt = 'Image2 sélectionnée';
+          photoContainer.appendChild(imgElement2);
+          warenkorbbtn.style.display='block';
+        }
       }
+    }
+    else{
+      alert('Wählen Sie zuerst die zwei andere Teilen!!');
     }
   });
 }
+var coll1 = document.getElementById('coll1');
+coll1.addEventListener("click", function(){
+ coll1.style.borderColor='green';
+ coll2.style.borderColor='white';
+ coll3.style.borderColor='white';
+  imgElement1.style.filter='hue-rotate(-100deg)';
+}); 
+var coll2 = document.getElementById('coll2');
+coll2.addEventListener("click", function(){
+   coll2.style.borderColor='green';
+   coll3.style.borderColor='white';
+   coll1.style.borderColor='white';
+  imgElement1.style.filter='hue-rotate(-190deg)';
+});
+var coll3 = document.getElementById('coll3');
+coll3.addEventListener("click", function(){
+ coll3.style.borderColor='green';
+ coll2.style.borderColor='white';
+ coll1.style.borderColor='white';
+  imgElement1.style.filter='hue-rotate(0deg)';
+});
+
+
+
 
