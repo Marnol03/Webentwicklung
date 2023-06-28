@@ -141,6 +141,48 @@ i{
     width: 375px;
 }
 
+.btn{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    color: black;
+    margin-left: 110px;
+    margin-top: 100px;
+    font-weight: var(--font-medium);
+}
+
+.btn::before{
+    content: '';
+    border: 2px solid gray;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgb(255, 0, 195);
+    transition: .3s;
+    animation: button 3s infinite;
+}
+
+.btn{
+    display: none;
+}
+#icon{
+    color: #fff;
+}
+
+@keyframes button{
+    0%{
+        box-shadow: 0 0  12px rgb(255, 0, 140);
+    }
+    50%{
+        box-shadow: 0 0  24px rgb(255, 0, 111);
+    }
+}
+
 @media screen and (min-width:667px ){
     .toggle{
         display: none;
