@@ -422,7 +422,13 @@ footer .foot{
 .foo1:hover{
     color: green;
 }
-
+#icon{
+    color: #fff;
+}
+#car{
+    font-size: 44px;
+    color:#fff;
+}
 i{
     color: #000000;
 }
