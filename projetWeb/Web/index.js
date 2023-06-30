@@ -11,6 +11,12 @@ var signUpLink = document.getElementById('wepp');
 var loginLink = document.getElementById('wipp');
 var loginForm = document.querySelector('.sec2 .wrapper:first-child');
 var signUpForm = document.getElementById('wapp');
+let signup = document.getElementById('bit');
+
+signup.addEventListener('click', ()=>{
+  loginForm.style.display = 'grid'; // Login verstecken
+  signUpForm.style.display = 'none';
+})
 
 signUpLink.addEventListener('click', function(event) {
     event.preventDefault();
