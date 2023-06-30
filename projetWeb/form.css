@@ -13,7 +13,8 @@ header{
     display: flex;
     justify-content: space-between;
     top:0;
-    color:black;
+    color:white;
+    background-color: rgb(238, 20, 129);
 }
 .toggle{
     display: block;
@@ -69,7 +70,7 @@ h1{
     font-size: 20px;
 }
 .name span{
-    color: #3E3BC0;
+    color: white;
     font-weight: bold;
     font-size: 3em;
  }
@@ -127,7 +128,7 @@ input{
 footer{
     text-align: center;
     color: white;
-    background-color:#3E3BC0;
+    background-color:rgb(238, 20, 129);
     width:100%;
     padding-top:15px;
     margin-bottom:0px;

@@ -184,16 +184,102 @@ coll3.addEventListener("click", function(){
  coll1.style.borderColor='white';
   imgElement1.style.filter='hue-rotate(0deg)';
 });
-function toggleAnswer() {
-  const question = this;
-  const answer = question.nextElementSibling;
-  const chevron = question.querySelector('.chevron');
+const questions = document.querySelectorAll('.question');
 
-  answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+const colp=0;
+questions.forEach(question => {
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+  });
+});
+
+
+const rouesRadios = document.getElementsByName('check');
+const siegesRadios = document.getElementsByName('check1');
+const parechocsRadios = document.getElementsByName('check2');
+const collist = document.getElementsByName('coll');
+
+function getSelectedValue(radios) {
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      return radios[i].value;
+    }
+  }
+  return null;
 }
 
-const questions = document.querySelectorAll('.question');
-questions.forEach((question) => {
-  question.addEventListener('click', toggleAnswer);
-});1
 
+function calculateAndUpdateTotalPrice() {
+
+  const rouesValue = getSelectedValue(rouesRadios);
+  const siegesValue = getSelectedValue(siegesRadios);
+  const parechocsValue = getSelectedValue(parechocsRadios);
+  const collValue = getSelectedValue(collist);
+
+  if (rouesValue && siegesValue && parechocsValue) {
+
+    const rouesPrice = parseFloat(rouesValue);
+    const siegesPrice = parseFloat(siegesValue);
+    const parechocsPrice = parseFloat(parechocsValue);
+    const colPrice = parseFloat(collValue);
+    // Preis Rechnen
+    const totalPrice = rouesPrice + siegesPrice + parechocsPrice ;
+
+    // jetzt der neue Preis hinzufügen
+    const totalPriceElement = document.querySelector('.final-price');
+    totalPriceElement.textContent = 'Neu: ' + totalPrice + '€';
+  } else {
+    console.log('Wählen sie Bitte eine Option für jede Gruppe.');
+  }
+}
+
+
+rouesRadios.forEach(radio => {
+  radio.addEventListener('change', calculateAndUpdateTotalPrice);
+});
+
+siegesRadios.forEach(radio => {
+  radio.addEventListener('change', calculateAndUpdateTotalPrice);
+});
+
+parechocsRadios.forEach(radio => {
+  radio.addEventListener('change', calculateAndUpdateTotalPrice);
+});
+collist.forEach(span =>{
+  div.addEventListener('click', calculateAndUpdateTotalPrice);
+})
+
+const allimg= photoContainer.querySelectorAll('img');
+
+
+warenkorbbtn.addEventListener('click', addToCart);
+
+function addToCart() {
+
+  const selectedImageDivs = document.getElementsByClassName('selectedImage');
+
+  for (let i = 0; i < selectedImageDivs.length; i++) {
+    const selectedDiv = allimg[i];
+
+    const selectedImage = selectedDiv.querySelector('img').src;
+
+    const selectedContent = selectedDiv.innerHTML;
+
+    const item = {
+      image: selectedImage,
+      content: selectedContent
+    };
+
+    cart.push(item);
+  }
+
+  const cartSection = document.getElementById('panier');
+  cartSection.innerHTML = '';
+
+  cart.forEach(item => {
+    const cartItem = document.createElement('div');
+    cartItem.innerHTML = item.content;
+    cartSection.appendChild(cartItem);
+  });
+}

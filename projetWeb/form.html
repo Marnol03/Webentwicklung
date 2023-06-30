@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="form.css">
-        <script src="web.js" defer></script>
+        <script type="module" src="script.js"></script>
     </head>
     <body >
         <header>
             <div class="name" ><span>D</span>rive<span>D</span>eal</div>
             <ul class="nav">
                 <li><a href="home.html" ><i class="fa-solid fa-house"></i>Home</a></li>
-                <li><a href="index.html"><i class="fa-sharp fa-solid fa-hammer-war"></i>Customizer</a></li>
+                <li><a href="index3.html"><i class="fa-sharp fa-solid fa-hammer-war"></i>Customizer</a></li>
                 <li><a href="warenkorp.html"><i class="fa-solid fa-cart-shopping"></i>Warenkorb</a></li>
                 <li><a href="form.html" class="hilfe">Hilfe?</a></li>
                 <li><a href="#">Über uns</a></li>
@@ -38,25 +38,19 @@
                     <div class="boite">
                         <label for="Nachname">Nachname: </label >
                         <div class="bt">
-                            <i class="fa-solid fa-user-large" class="tc"></i>
                             <input type="text" name="Nachname" id="Nachname">  
                         </div>  
                     </div>
                     <div class="boite"><span class="space"></span>
                         <label for="Vorname">Vorname: </label >
                         <div class="bt">
-                            <i class="fa-solid fa-user-large" class="tc"></i> 
                             <input type="text" name="Vorname" id="Vorname">
                         </div>
                     </div>
                 </div>
             <div class="boite">
                 <label for="Telefonnummer">Telefonnummer: </label >
-                <div class="bt">
-                    <i class="fa-solid fa-phone" class="tc"></i>
-                    <input type="number" name="Telefonnummer" id="Telefonnummer">
-                    
-                </div> 
+                <input type="number" name="Telefonnummer" id="Telefonnummer">
             </div>
             <div class="boite">
                 <label for="Email">E-mail: </label >
@@ -71,7 +65,7 @@
                 <textarea placeholder="Schreiben sie Ihre Nachricht hier.."></textarea>
             </div>
         </div>
-        <div  align="center"><button >Abbrechen</button>
+        <div  align="center">
             <button class="schicken">Senden</button></div>
 
         <footer>
