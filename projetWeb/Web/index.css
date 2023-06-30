@@ -89,7 +89,32 @@ h1{
     text-align: center;
     font-size: 20px;
 }
-
+@keyframes anim{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-200px);
+    }
+    50%{
+        transform: translateY(-400px);
+    }
+    75%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.ipub{
+    width: 90%;
+    height: 300px;
+    overflow: hidden; 
+    margin-left: 5%; 
+}
+.ipub2{
+    animation: anim 10s infinite;
+}
 footer{
     display: grid;
     text-align: center;
@@ -167,7 +192,7 @@ i{
     position: relative;
     width: 70px;
     height: 70px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     justify-self: center;
@@ -186,10 +211,6 @@ i{
     box-shadow: 0 0 12px rgb(255, 0, 195);
     transition: .3s;
     animation: button 3s infinite;
-}
-
-.btn{
-    display: none;
 }
 #icon{
     color: #fff;
@@ -457,6 +478,13 @@ input:focus{
     .sec2{
 
     }
+    .btn::before{
+        width: 150px;
+        height: 150px;
+    }
+    .btn{
+        left: -10%;
+    }
     .wrapper{
         margin-top: 0px;
         width:80%;
@@ -515,7 +543,7 @@ input:focus{
         margin-left: -10px;
     }
     .home_car{
-        margin-left:-90px;
+        
     }
     .home-text{
         position: relative;
@@ -559,6 +587,13 @@ input:focus{
     }
     .fooo{
         margin-left: 10%;
+    }
+    .kontakt{
+        margin-left: 10%;
+    }
+    #addKont{
+        position: relative;
+        top: -50%;
     }
     .fo {
         margin-left: 9%;
