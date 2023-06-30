@@ -30,19 +30,6 @@ loginLink.addEventListener('click', function(event) {
     loginForm.style.display = 'grid'; // Login zeigen
 });
 
-// // Sélectionner les éléments nécessaires
-// var loginButton = document.getElementById('but');
-// var startButton = document.getElementById('startBtn');
-
-// // Ajouter un gestionnaire d'événement au clic sur le bouton "Login"
-// loginButton.addEventListener('click', function() {
-//     // Vérifier si le bouton "Start" est déjà affiché
-//     if (startButton.style.display === 'none') {
-//         // Afficher le bouton "Start"
-//         startButton.style.display = 'block';
-//     }
-// });
-
 // Sélectionner le bouton "Login"
 var loginButton = document.getElementById('but');
 
@@ -58,3 +45,16 @@ loginButton.addEventListener('click', function(event) {
 
   boutDiv.style.display = 'grid'; // Afficher le div avec la classe "bout"
 });
+
+const btn = document.getElementById('startBtn');
+const log = document.getElementById('but');
+const formlogin = document.getElementById('wrappe');
+const iwarek =document.getElementById('iwarek');
+const icust =document.getElementById('icust');
+
+but.addEventListener('click', function(){
+    formlogin.style.display = 'none';
+    btn.style.display = 'flex';
+    iwarek.style.display = 'flex';
+    icust.style.display = 'flex';
+})
