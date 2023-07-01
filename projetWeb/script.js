@@ -143,6 +143,7 @@ for (var i = 0; i < radioElements.length; i++) {
         } else {
           imgElement2 = document.createElement('img');
           imgElement2.className = 'img3';
+          imgElement2.id ='img3';
           imgElement2.src = imageURL;
           imgElement2.alt = 'Image2 sélectionnée';
           photoContainer.appendChild(imgElement2);
@@ -249,36 +250,14 @@ collist.forEach(span =>{
   div.addEventListener('click', calculateAndUpdateTotalPrice);
 })
 
-const allimg= photoContainer.querySelectorAll('img');
+let warenkorbbtn = document.getElementById('warenkorbbtn');
+var AusgewählteB = document.getElementById("img3");
 
+warenkorbbtn.addEventListener("click", function() {
+  var bURL = AusgewählteB.src;
+  
+  localStorage.setItem("AusgewählteBURL", bURL);
+  
+  window.location.href = "warenkorp.html?imageURL=" + encodeURIComponent(bURL);
+});
 
-warenkorbbtn.addEventListener('click', addToCart);
-
-function addToCart() {
-
-  const selectedImageDivs = document.getElementsByClassName('selectedImage');
-
-  for (let i = 0; i < selectedImageDivs.length; i++) {
-    const selectedDiv = allimg[i];
-
-    const selectedImage = selectedDiv.querySelector('img').src;
-
-    const selectedContent = selectedDiv.innerHTML;
-
-    const item = {
-      image: selectedImage,
-      content: selectedContent
-    };
-
-    cart.push(item);
-  }
-
-  const cartSection = document.getElementById('panier');
-  cartSection.innerHTML = '';
-
-  cart.forEach(item => {
-    const cartItem = document.createElement('div');
-    cartItem.innerHTML = item.content;
-    cartSection.appendChild(cartItem);
-  });
-}
