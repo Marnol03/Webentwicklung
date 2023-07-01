@@ -1,7 +1,9 @@
+/*Style für das Gesamtelayout!*/
 *{
     box-sizing: border-box;
 }
 
+/*Style für Body*/
 body{
    display: grid;
    font-family: 'poppins' , sans-serif;
@@ -10,7 +12,7 @@ body{
    background-color: white;
    height: 100%;
 }
-header{
+header{   /*Style für den Header*/
     z-index: 1;
     padding: 20px;
     display: flex;
@@ -19,6 +21,7 @@ header{
     color:rgb(240, 233, 233);
     background-color: #c03b79;
 }
+/*Anfang Style für den Toggle*/
 .toggle{
     display: block;
     font-size: 1.6rem;
@@ -40,6 +43,9 @@ header{
     position:fixed;
    margin-left:-26px;
 }
+/*Ende Style für den Toggle*/
+
+/*Anfang Style für die Navigationsliste*/
 .navi{
     background-color: #c03b79;
     position: fixed;
@@ -70,12 +76,18 @@ header{
 .open .navi a:hover{
     background-color:#c03b79;
 }
+#car{       /*Style Logo fürs Logo*/
+    font-size: 44px;
+    color:#fff;
+    font-size: 44px;
+    color:#fff;
+}
 .name span{
     color: #fff;
     font-weight: bold;
     font-size: 3rem;
 }
-#iwarek, #icust{
+#iwarenkorb, #icustomizer{
     display: none;
     margin: 0px;
     padding: 0px;
@@ -85,11 +97,14 @@ header{
     border-radius: 7px;
     border: 2px solid transparent;
 }
+/*Ende Style für die Navigationsliste*/
+
 h1{
     text-align: center;
     font-size: 20px;
 }
-@keyframes anim{
+
+@keyframes anim{        /*Style für die Werbung*/
     0%{
         transform: translateY(0px);
     }
@@ -115,80 +130,13 @@ h1{
 .ipub2{
     animation: anim 10s infinite;
 }
-footer{
-    display: grid;
-    text-align: center;
-    color: white;
-    background-color:#c03b79;
-    width:100%;
-    padding-top:15px;
-    margin-bottom:0px;
-    clear: both;
-}
-.foot{
-    display: grid;
-    padding: 15px 0;
-    font-size: 15px;
-}
-.titel{
-    font-size: 20px;
-}
-.foo1{
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    margin-right:30%;
-    position: relative;
-    margin-left: 100px;
-    bottom: 40px;
-    font-size: 1rem;
-}
-.foo1:hover{
-    color: green;
-}
 
-i{
-    color: #000000;
-}
-#car{
-    font-size: 44px;
-    color:#fff;
-}
-.liste-horaires{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    align-items: center;
-    margin-left: 50px;
-}
-.liste-horaires li{
-    margin: 10px;
-}
-.foo1{
-    list-style-type: none;
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    padding: 1px;
-    margin: 5px 10%;
-}
-.foot .lien-icone{
-    align-items: center;
-    padding: 5px;
-    margin:0px 3px;
-    
-}
 .itext{
     text-align: center;
 }
-.home-text img{
-    height: 200px;
-    width: 375px;
-}
 
-.btn{
+/*Style für den Button Start*/
+.ibtn{
     position: relative;
     width: 70px;
     height: 70px;
@@ -201,7 +149,7 @@ i{
     font-weight: var(--font-medium);
 }
 
-.btn::before{
+.ibtn::before{
     content: '';
     border: 2px solid gray;
     width: 90px;
@@ -212,6 +160,7 @@ i{
     transition: .3s;
     animation: button 3s infinite;
 }
+
 #icon{
     color: #fff;
 }
@@ -224,15 +173,12 @@ i{
         box-shadow: 0 0  24px rgb(255, 0, 111);
     }
 }
+/*Style für die Informationen über das Auto*/
 .home-text img{
     height: 300px;
     width: 100%;
 }
-
 .home{
-    display: grid;
-}
-.sec2{
     display: grid;
 }
 
@@ -260,7 +206,8 @@ i{
     margin-bottom: .25rem;
 }
 
-.wrapper{
+/*Style für die Formular*/
+.iformBox{
     display: grid;
     width: 75%;
     padding: 2rem 1rem;
@@ -270,10 +217,13 @@ i{
     text-align: center;
     box-shadow: 0 10px 35px rgb(255, 0, 238);
 }
-.member, .terms{
+.iformSign{
     display: grid;
 }
-.terms a, .member a, .recover a{
+.imember, .iterms{
+    display: grid;
+}
+.iterms a, .imember a, .recover a{
     color: rgb(242, 143, 245);
     font-size: 1rem;
     text-decoration: none;
@@ -310,7 +260,7 @@ form input{
     cursor: pointer;
     background-color: rgb(255, 0, 238);
 }
-#but, #bit{
+#but, #buttonSign{
     margin-left: 50px;
     margin-top: 10px;
 }
@@ -324,19 +274,19 @@ button:hover{
 input:focus{
     border: 1px solid rgb(192, 192, 192);
 }
-.terms{
+.iterms{
     margin-top: 0.2rem;
 }
-.terms input{
+.iterms input{
     height: 1em;
     width: 1em;
     vertical-align: middle;
     cursor: pointer;
 }
-.terms label{
+.iterms label{
     font-size: 0.9rem;
 }
-.member{
+.imember{
     font-size: 0.8rem;
     margin-top: 1.4rem;
 }
@@ -350,12 +300,74 @@ input:focus{
     position: relative;
     left: -15px;
 }
-#wapp{
+#iformBoxSign{
     display: none;
 }
 
-.tit{
+/* Anfang Style für den Footer*/
+footer{
+    display: grid;
+    text-align: center;
+    color: white;
+    background-color:#c03b79;
+    width:100%;
+    padding-top:15px;
+    margin-bottom:0px;
+    clear: both;
+}
+.foot{          /*Style für jede Teile des Footers*/
+    display: grid;
+    padding: 15px 0;
+    font-size: 15px;
+}
+.titel{         /*Style für den Titel jeden Teile des Footers*/
+    font-size: 20px;
+}
+/*Style für den Teil Service*/
+.tit{ 
     margin-bottom: 10%;
+}
+.fooo{
+    padding-bottom: 0%;
+}
+.foo1{          /*Style für die Linksservice im Footer*/
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+    margin-right:30%;
+    position: relative;
+    margin-left: 100px;
+    bottom: 40px;
+    font-size: 1rem;
+}
+.foo1:hover{
+    color: green;
+}
+.foo1{
+    list-style-type: none;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+    margin: 5px 10%;
+}
+
+i{
+    color: #000000;
+}
+
+/*Style für den Teil Arbeitstage*/
+.iListTage{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin-left: 50px;
+}
+.iListTage li{
+    margin: 10px;
 }
 .ti{
     margin-top: 0%;
@@ -363,12 +375,17 @@ input:focus{
 #zeit{
     font-size: 1rem;
 }
-.fooo{
-    padding-bottom: 0%;
+/*Style für den Teil Folge Uns*/
+.foot .iLink-icone{  
+    align-items: center;
+    padding: 5px;
+    margin:0px 3px;
 }
 #add{
     margin-top: 0%;
 }
+
+/*Responsive Style*/
 @media screen and (min-width:667px ){
     .toggle{
         display: none;
@@ -391,7 +408,6 @@ input:focus{
        margin-right: 10px;
         color: rgb(252, 244, 244);
         font-size: 1.5rem;
-
     }
     .navi a:hover{
         background-color: #79e110;
@@ -418,13 +434,104 @@ input:focus{
     header{
         padding-bottom: 0px;
         margin-bottom: -30px;
-
     }
     hr{
         border: 1px solid black;
         margin-bottom: 50px;
     }
 
+    .container{         /*Position die Formular und das Bild*/
+        display: grid;
+        grid-template-columns:50% 50%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    /*Bild*/
+    .home-text img{
+        height: 400px;
+        width: 90%;
+        margin-left: 10%;
+    }
+    .ititle1{
+        margin-top: 30px 0px 20px 0px;
+        font-size: 3rem;
+    }
+    .itext{
+        font-size: 1.4rem;
+    }
+    .home-text{
+        position: relative;
+        row-gap: 3rem;
+    }
+    .home-text h1{
+        padding-top: 7rem;
+    }
+    .home_car_name{
+        font-size: .800rem;
+        font-weight: 400;
+        color: black; 
+    }
+    .home_car_data{
+        justify-content: space-between;
+    }
+    .home_car_nummer{
+        font-size: var(--h2-font-size) ;
+        margin-bottom: .25rem;
+    }
+
+    /*Formular*/
+    .iformBox{
+        margin-top: 0px;
+        width:80%;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 10px 35px rgb(255, 0, 238);
+        position:relative;
+    }
+    .button{
+        font-size: 1.5rem;
+        margin-top: 1.8rem;
+        padding: 10px 0;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        width: 80%;
+        color: #fff;
+        cursor: pointer;
+        background-color: rgb(255, 0, 238);
+    }
+    .ibtn::before{
+        width: 150px;
+        height: 150px;
+    }
+    .ibtn{
+        left: -10%;
+    }
+    .imember, .iterms{
+        display: grid;
+    }
+    .iterms a, .imember a, .recover a{
+        color: rgb(242, 143, 245);
+        font-size: 1rem;
+        text-decoration: none;
+        position: relative;
+        place-items: center;
+    }
+    .iterms{
+        display: flex;
+        margin-left: 10%;
+    }
+    .iterms label{
+        margin-left: 6%;
+        font-size: 1.1rem;
+    }
+    .con{
+        margin-left: -10px;
+    }
+
+    /*Footer*/
     footer{
         width: 100%;
         position: relative;
@@ -443,124 +550,19 @@ input:focus{
         flex-direction: column;
 
     }
+    .foot .name{
+        position: relative;
+        top:50%;
+        margin-left: 30px;
+    }
     footer .lo{
         margin-top: 20px;
     }
-    footer .las{
-        position: relative;
-        margin-top: 50px;
-    }
-    .space{
-        margin-right: 30px;
-        margin-left: 30px;
-    }
-    .liste-horaires{
+    .iListTage{
         display: grid;
         flex-direction: column;
         margin: 20px 40% 20px 0 ;
         align-items: center;
-    }
-    .home-text img{
-        height: 400px;
-        width: 90%;
-    }
-    .container{
-        display: grid;
-        grid-template-columns:50% 50%;
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-    }
-    .home{
-
-    }
-
-    .sec2{
-
-    }
-    .btn::before{
-        width: 150px;
-        height: 150px;
-    }
-    .btn{
-        left: -10%;
-    }
-    .wrapper{
-        margin-top: 0px;
-        width:80%;
-        background-color: white;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 10px 35px rgb(255, 0, 238);
-        position:relative;
-    }
-    .member, .terms{
-        display: grid;
-    }
-    .terms a, .member a, .recover a{
-        color: rgb(242, 143, 245);
-        font-size: 1rem;
-        text-decoration: none;
-        position: relative;
-        place-items: center;
-    }
-    .home_img{
-        width: 90%;
-        margin-left: 10%;
-    }
-    .home-text h1{
-        padding-top: 7rem;
-    }
-    
-    .button{
-        font-size: 1.5rem;
-        margin-top: 1.8rem;
-        padding: 10px 0;
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        width: 80%;
-        color: #fff;
-        cursor: pointer;
-        background-color: rgb(255, 0, 238);
-    }
-    .ititle1{
-        margin-top: 30px 0px 20px 0px;
-        font-size: 3rem;
-    }
-    .itext{
-        font-size: 1.4rem;
-    }
-    .terms{
-        display: flex;
-        margin-left: 10%;
-    }
-    .terms label{
-        margin-left: 6%;
-        font-size: 1.1rem;
-    }
-    .con{
-        margin-left: -10px;
-    }
-    .home_car{
-        
-    }
-    .home-text{
-        position: relative;
-        row-gap: 3rem;
-    }
-    
-    .home_car_name{
-        font-size: .800rem;
-        font-weight: 400;
-        color: black; 
-    }
-    .home_car_data{
-        justify-content: space-between;
-    }
-    .home_car_nummer{
-        font-size: var(--h2-font-size) ;
-        margin-bottom: .25rem;
     }
     #zeit{
         position: relative;
@@ -570,15 +572,6 @@ input:focus{
     .foo1{
         position: relative;
         bottom: 40px;
-    }
-    #add{
-        position: relative;
-
-    }
-    #copi{
-        padding-top: 50px;
-        margin-left: 9%;
-
     }
     .folge{
         display: flex;
@@ -598,87 +591,13 @@ input:focus{
     .fo {
         margin-left: 9%;
     }
-    .foot .name{
+    #add{
         position: relative;
-        top:50%;
-        margin-left: 30px;
-    }
-    
-}
 
-/* @media screen and (min-width: 1100px) {
-    .home-text img{
-        height: 500px;
-        width: 1000px;
     }
-    .home{
-        display: grid;
-        grid-column: 1 / 2;
+    #copi{
+        padding-top: 50px;
+        margin-left: 9%;
+
     }
-    .sec2{
-        display: grid;
-        grid-column: 2 / 2;
-        padding-top: 9.2rem;
-    }
-    .wrapper{
-        display: grid;
-        width: 500px;
-        margin-left: -400px;
-        background-color: white;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 10px 35px rgb(255, 0, 238);
-    }
-    .member, .terms{
-        display: grid;
-    }
-    .terms a, .member a, .recover a{
-        color: rgb(242, 143, 245);
-        font-size: 1rem;
-        text-decoration: none;
-        position: relative;
-        place-items: center;
-    }
-    
-    .home-text h1{
-        padding-top: 7rem;
-    }
-    
-    .button{
-        font-size: 1.5rem;
-        margin-top: 1.8rem;
-        padding: 10px 0;
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        width: 80%;
-        color: #fff;
-        cursor: pointer;
-        background-color: rgb(255, 0, 238);
-    }
-    .terms label{
-        font-size: 1.1rem;
-    }
-    .home_car{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        margin-left: -400px;
-    }
-    .home-text{
-        position: relative;
-        row-gap: 3rem;
-    }
-    
-    .home_car_name{
-        font-size: .800rem;
-        font-weight: 400;
-        color: black; 
-    }
-    .home_car_data{
-        justify-content: space-between;
-    }
-    .home_car_nummer{
-        font-size: var(--h2-font-size) ;
-        margin-bottom: .25rem;
-    }
-} */
+}

@@ -1,3 +1,4 @@
+//Teil fuer die Toggle
 let toggle = document.querySelector(".toggle")
 let body = document.querySelector("body")
  
@@ -7,60 +8,61 @@ toggle.addEventListener('click',function()
   }
 )
 
-var signUpLink = document.getElementById('wepp');
-var loginLink = document.getElementById('wipp');
-var loginForm = document.querySelector('.sec2 .wrapper:first-child');
-var signUpForm = document.getElementById('wapp');
-let signup = document.getElementById('bit');
+var signUpLink = document.getElementById('wepp');                               // signUpLink selektieren
+var loginLink = document.getElementById('ilinkLog');                            // loginLink selektieren  
+var loginForm = document.querySelector('.iformSign .iformBox:first-child');     // loginForm selektieren
+var signUpForm = document.getElementById('iformBoxSign');                       // signUpForm selektieren
+let signup = document.getElementById('buttonSign');                             // signup selektieren  
 
 signup.addEventListener('click', ()=>{
-  loginForm.style.display = 'grid'; // Login verstecken
+  loginForm.style.display = 'grid';                                              // Login verstecken
   signUpForm.style.display = 'none';
 })
 
 signUpLink.addEventListener('click', function(event) {
     event.preventDefault();
-    loginForm.style.display = 'none'; // Login verstecken
-    signUpForm.style.display = 'grid'; // Sign Up zeigen
+    loginForm.style.display = 'none';                                             // Login verstecken
+    signUpForm.style.display = 'grid';                                            // Sign Up zeigen
 });
 
 loginLink.addEventListener('click', function(event) {
     event.preventDefault();
-    signUpForm.style.display = 'none'; // Sign Up verstecken
-    loginForm.style.display = 'grid'; // Login zeigen
+    signUpForm.style.display = 'none';                                            // Sign Up verstecken
+    loginForm.style.display = 'grid';                                             // Login zeigen
 });
 
 loginLink.addEventListener('click', function(event) {
     event.preventDefault();
-    signUpForm.style.display = 'none'; // Sign Up verstecken
-    loginForm.style.display = 'grid'; // Login zeigen
+    signUpForm.style.display = 'none';                                            // Sign Up verstecken
+    loginForm.style.display = 'grid';                                             // Login zeigen
 });
 
-// Sélectionner le bouton "Login"
+// LoginButton selektieren
 var loginButton = document.getElementById('but');
 
-// Sélectionner le bouton "Start"
-var startButton = document.getElementById('startBtn');
+// LoginButton selektieren
+var startButton = document.getElementById('istartbtn');
 
-// Sélectionner le div avec la classe "bout"
+// Div mit der Klasse "Bout" 
 var boutDiv = document.querySelector('.bout');
 
 // Ajouter un gestionnaire d'événement au clic sur le bouton "Login"
+// Dem Klick auf die Schaltfläche "Login" einen Ereignishandler hinzufügen
 loginButton.addEventListener('click', function(event) {
-  event.preventDefault(); // Empêcher le comportement par défaut du formulaire
+  event.preventDefault();                                                       // Verhindern des Standardverhaltens des Formulars
 
-  boutDiv.style.display = 'grid'; // Afficher le div avec la classe "bout"
+  boutDiv.style.display = 'grid';                                               // Div mit der Klasse "Bout" zeigen
 });
 
-const btn = document.getElementById('startBtn');
+const ibtn = document.getElementById('istartbtn');
 const log = document.getElementById('but');
-const formlogin = document.getElementById('wrappe');
-const iwarek =document.getElementById('iwarek');
-const icust =document.getElementById('icust');
+const formlogin = document.getElementById('iformBoxLogin');
+const iwarenkorb =document.getElementById('iwarenkorb');
+const icustomizer =document.getElementById('icustomizer');
 
 but.addEventListener('click', function(){
-    formlogin.style.display = 'none';
-    btn.style.display = 'flex';
-    iwarek.style.display = 'flex';
-    icust.style.display = 'flex';
+    formlogin.style.display = 'none';                                            // formlogin verstecken
+    ibtn.style.display = 'flex';                                                 // StartButton zeigen
+    iwarenkorb.style.display = 'flex';                                           // Warenkorbslink zeigen
+    icustomizer.style.display = 'flex';                                          // Customizerslink zeigen
 })
