@@ -271,7 +271,6 @@ right: 20px;
 
 .backgroundfenster {
   display:none;
-  position: fixed;
   width: 100%;
   height: 100%;
   bottom: 1px;
@@ -284,7 +283,6 @@ right: 20px;
 }
 
 .bezahlenfenster {
-  position: fixed;
   border-radius: 20px;
   width: 80%;
   height: auto;
