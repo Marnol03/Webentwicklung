@@ -29,8 +29,9 @@
         <div class="wrapper">
             <h1>Sign Up</h1>
             <form action="#" method="post">
-                <input type="text" placeholder="Username">
                 <input type="text" placeholder="Name">
+                <input type="text" placeholder="Benutzername">
+                <input type="text" placeholder="Email">
                 <input type="Password" placeholder="Password">
                 <input type="Password" placeholder="Re-Enter Password">
             </form>
@@ -84,3 +85,90 @@
             <footer>
         </body>
 </html>
+
+
+<!-- <?php
+    //Verbindung zu der Datenbank
+    $servername = "132web.site/project/schwarzemamba";
+    $username = "schwarzemamba";
+    $password = "SrEuxQ";
+    $dbname = "DB";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        console.log("Datenbank error");
+    }
+    
+    
+
+    // try{
+    //     $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
+    //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //     //echo "Die Verbindung hat geklappt!";
+    // }
+    // catch(PDOException $e){
+    //     echo "Die Verbindung ist festgeschlagen:" .$e->getMessage();
+    // }
+
+    $name = ""; $benutzername= "", $email = "", $passwort = "";
+    
+    //update USERS basic infos
+        // $sql = "UPDATE USERS SET Name='$name',
+        // Benutzername='$enutzername', 
+        // Email='$email',
+        // Passwort='$passwort';
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+            $name = ($_POST["t_fn"]) ;
+            $benutzername = ($_POST["t_fn"]) ;
+            $email = ($_POST["t_fn"]) ;
+            $password = ($_POST["t_fn"]) ;
+
+            $sql = "CREATE TABLE USERS IF NOT EXISTS";
+
+            if ($conn->query($sql) === TRUE) {
+
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
+
+            $sql = "INSERT INTO USERS(Name, Benutzername, Email, Password)VALUES('$name', $Benutzername, $Email, $Passwort)";
+
+            if ($conn->query($sql) === TRUE) {
+
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+        
+    
+?> 
+
+<?php
+    $servername = "132web.site/project/schwarzemamba";
+    $username = "schwarzemamba";
+    $password = "SrEuxQ";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password);
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Create database
+    $sql = "CREATE DATABASE myDB2";
+    if ($conn->query($sql) === TRUE) {
+    console.log("Database created successfully");
+    } else {
+    console.log( "Error creating database: " , $conn->error);
+    }
+
+    $conn->close();
+    ?> 

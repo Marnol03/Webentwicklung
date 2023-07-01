@@ -1,3 +1,8 @@
+*{
+    display: grid;
+    font-size: 0.9rem;
+
+}
 body{
     font-family: 'poppins' , sans-serif;
     margin: 0%;
@@ -215,6 +220,7 @@ i{
     font-family: "Poppins", sans-serif;
 }*/
 .wrapper{
+    display: grid;
     width: 270px;
     padding: 2rem 1rem;
     margin: 50px auto;
@@ -223,7 +229,11 @@ i{
     text-align: center;
     box-shadow: 0 10px 35px blue;
 }
+.member, .terms{
+    display: grid;
+}
 .terms a, .member a, .recover a{
+    grid-gap: -10px;
     color: rgb(143, 143, 245);
     font-size: 1rem;
     text-decoration: none;

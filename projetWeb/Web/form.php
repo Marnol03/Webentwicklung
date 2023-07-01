@@ -7,15 +7,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Autos zu verkaufen</title>
     <link rel="stylesheet" href="home.css">
-    <script type="module" src="index.js"></script>
-    <script type="text/javascript" src=""></script>
+    <link rel="stylesheet" href="signup.css">
+    <!-- <script type="module" src="index.js"></script> -->
+    <!-- <script type="text/javascript" src=""></script> -->
 </head>
 
+
 <body>
+    <?php
+    $servername = "https://db.inf-pool.it.hs-worms.de";
+    $username = "sidb_sose23_023";
+    $password = "J4w1LztpA4uVRfbu";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password);
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed4: " . $conn->connect_error);
+    }
+    else{
+        echo "Succes";
+    }
+
+    // Create database
+    $sql = "CREATE DATABASE DB";
+    if ($conn->query($sql) === TRUE) {
+    console.log("Database created successfully");
+    } else {
+    console.log( "Error creating database: " , $conn->error);
+    }
+
+    $conn->close();
+    ?> 
+
     <header>
         <div class="name" ><span>D</span>rive<span>D</span>eal</div>
         <ul class="nav">
-            <li><a href="home.html" class="hilfe"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="home.html" ><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="login.html"></a>Login</a></li>
+            <li><a href="ueber.html" class="hilfe">Ueber Uns</a></li>
             <li><a href="ueber.html">Über uns</a></li>
         </ul>
         <div class="toggle">
@@ -56,50 +86,62 @@
                     <h3 class="home_car_name">BATTERY</h3>
                 </div>
             </div>
-            <!-- <a href="#Sign" class="btn">START</a> -->
+            <a href="#Sign" class="btn">START</a>
         </div>
     </section>
 
-    <a name="Login"></a>
+    <a name="Sign"></a>
     <div class="wrapper">
-        <h1>Login</h1>
-        <form action="#" method="post">
-            <input type="text" placeholder="Benutzername">
-            <input type="Password" placeholder="Password">
-            <div class="recover">
-                <a href="#">Password Vergessen?</a>
-            </div>
-        </form>
-        <a href="index.html" class="button" id="wrapp"><button>Login</button></a>
-        <div class="member" >
-            Schon registriet? <a href="#Sign" id="wapp">
-                Jetzt sich registrieren
-            </a>
-        </div>
-    </div>
-
-    <!-- <a name="Sign"></a> -->
-    <div class="wrapper" id="wapp">
         <h1>Sign Up</h1>
-        <form action="#" method="post">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Benutzername">
-            <input type="text" placeholder="Email">
-            <input type="Password" placeholder="Password">
-            <input type="Password" placeholder="Re-Enter Password">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+        <input type="text" name="t_fn"  placeholder="Name" maxlength="20" required value="<?php echo $t_fn;?>">
+            <!-- <input type="text" placeholder="Name"> -->
+            <!-- <input type="text" placeholder="Benutzername"> -->
+            <input type="text" name="t_fn"  placeholder="Benutzername" maxlength="20" required value="<?php echo $t_fn;?>">
+            <!-- <input type="text" placeholder="Email"> -->x
+            <input type="text" name="t_fn"  placeholder="Email" maxlength="20" required value="<?php echo $t_fn;?>">
+            <!-- <input type="Password" placeholder="Password"> -->
+            <input type="text" name="t_fn"  placeholder="Password" maxlength="20" required value="<?php echo $t_fn;?>">
+            <!-- <input type="Password" placeholder="Re-Enter Password"> -->
+            <input type="text" name="t_fn"  placeholder="Re-Enter Password" maxlength="20" required value="<?php echo $t_fn;?>">
+            <input type="submit" value="Sign Up">
+            <p>Voici une: <?php echo $name;echo " ";?> </p>
         </form>
         <div class="terms">
             <input type="checkbox" id="checkbox">
             <label for="checkbox">Ich akzeptiere alles <a href="#">
                 Terms & Conditions</a></label>
         </div>
-        <a href="#Login" class="button" ><button>Sign Up</button></a>
+        <a href="#Login" class="button"><button>Sign Up</button></a>
         <div class="member">
             Schon eingeloggt? <a href="#Login">
                 Hier sich einloggen
             </a>
         </div>
     </div>
+
+    <a name="Login"></a>
+    <div class="wrapper">
+        <h1>Login</h1>
+        <form action="Login" method="post">
+            <!-- <input type="text" placeholder="Benutzername"> -->
+            <input type="text" name="t_fn"  placeholder="Benutzername" maxlength="20" required value="<?php echo $t_fn;?>">
+            <!-- <input type="Password" placeholder="Password"> -->
+            <input type="text" name="t_fn"  placeholder="Password" maxlength="20" required value="<?php echo $t_fn;?>">
+            <div class="recover">
+                <a href="#">Password Vergessen?</a>
+            </div>
+        </form>
+
+        
+        <a href="index.html" class="button"><button>Login</button></a>
+        <div class="member">
+            Schon registriet? <a href="./signup.html">
+                Jetzt sich registrieren
+            </a>
+        </div>
+    </div>
+
 
     <footer>
         <div class="foot">Unsere Service<br>

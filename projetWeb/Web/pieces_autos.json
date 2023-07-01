@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nom": "voiture de luxe",
+        "categorie": "Optiques",
+        "image": "bild/v1.png",
+        "description": "Distance d’éclairage : 100 mètres !",
+        "disponibilite": true
+    },
+    {
+        "id": 2,
+        "nom": "Plaquettes de frein (x4)",
+        "categorie": "Freinage",
+        "image": "bild/v1.PNG",
+        "description": "Une qualité de freinage optimale, par tous les temps.",
+        "disponibilite": true
+    },
+    {
+        "id": 3,
+        "nom": "Ampoule boîte à gants",
+        "categorie": "Optiques",
+        "image": "bild/v1.jpeg",
+        "description": "Pour y voir clair dans l’habitacle.",
+        "disponibilite": false
+    },
+    {
+        "id": 4,
+        "nom": "voiture de luxe",
+        "categorie": "Optiques",
+        "image": "bild/v1.png",
+        "description": "Distance d’éclairage : 100 mètres !",
+        "disponibilite": true
+    },
+    {
+        "id": 5,
+        "nom": "Plaquettes de frein (x4)",
+        "categorie": "Freinage",
+        "image": "bild/v1.PNG",
+        "description": "Une qualité de freinage optimale, par tous les temps.",
+        "disponibilite": true
+    },
+    {
+        "id": 6,
+        "nom": "Ampoule boîte à gants",
+        "categorie": "Optiques",
+        "image": "bild/v1.jpeg",
+        "description": "Pour y voir clair dans l’habitacle.",
+        "disponibilite": false
+    },
+    {
+        "id": 7,
+        "nom": "voiture de luxe",
+        "categorie": "Optiques",
+        "image": "bild/v1.png",
+        "description": "Distance d’éclairage : 100 mètres !",
+        "disponibilite": true
+    },
+    {
+        "id": 8,
+        "nom": "Plaquettes de frein (x4)",
+        "categorie": "Freinage",
+        "image": "bild/v1.PNG",
+        "description": "Une qualité de freinage optimale, par tous les temps.",
+        "disponibilite": true
+    },
+    {
+        "id": 9,
+        "nom": "Ampoule boîte à gants",
+        "categorie": "Optiques",
+        "image": "bild/v1.jpeg",
+        "description": "Pour y voir clair dans l’habitacle.",
+        "disponibilite": false
+    }
+]
