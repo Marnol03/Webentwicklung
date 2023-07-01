@@ -1,0 +1,537 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+ display: grid;
+ font-family: 'poppins' , sans-serif;
+ margin: 0%;
+ padding: 0%;
+ background-color: white;
+ height: 100%;
+}
+header{
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  top:0;
+  color:white;
+  background-color: rgb(238, 20, 129);
+}
+.toggle{
+  display: block;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.ouvrir{
+  display: block;   
+}
+.fermer{
+  display: none;
+}
+.open .ouvrir{
+  display:none;
+}
+.open .fermer{
+  display:block;
+}
+.nav{
+  background-color: rgb(238, 20, 129);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top:-20px;
+  left:-20px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  flex-direction: column;
+  align-items: center;
+  transform: translatex(-110%);
+  transition: transform 0.5s;
+  z-index: 10;
+}
+
+.nav li,a{
+  margin: 20px 0;
+  padding: 10px 40px;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: white;
+}
+
+.open .nav{
+  transform: translatex(20px);
+}
+.name span{
+  color: #f6f6fa;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.auto img{
+  height: 40vh;
+  width: 100vw;
+}
+
+.bloc img{
+  height: 25px;
+  width: 35px;
+}
+
+.bloc span{
+
+  font-size:20px;
+}
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #F4F7FD;
+  border-radius: 10px;
+  margin-top: 10%;
+  margin-left: 3%;
+  display: grid;
+  justify-content: space-between;
+  padding: 10px 5px;
+  overflow: hidden;
+}
+h2{
+  text-align: center;
+}
+.bezahl{
+  font-size: 70%;
+  color: #000000;
+}
+
+.form-section{
+  position: relative;
+  font-size: 16px;
+  margin-right: 30%;
+}
+
+.form-section .title{
+position: relative;
+color: rgb(11, 154, 16);
+font-size: 18px;
+font-weight: 10px;
+height: 2.8rem;
+left: 4%
+}
+
+.form-section > [class *='-section'],
+.form-section .input-row{
+ width: 100%;
+ margin-top: 16px;
+}
+
+.form-section .input-row{
+  display: grid;
+  justify-content: space-between;
+  gap: 5px;
+  width: 250px;
+}
+
+.form-section .card-number-section{
+  position: relative;
+  margin-top:32px  ;
+}
+
+.form-section .card-number-section .card-type{
+  position: absolute;
+  right: 2px;
+}
+
+.form-section .card-number-section .card-type svg{
+   position: relative;
+  width: 2em;
+  height: 2em;
+  color: var(--primary-color);
+right: 20px;
+}
+
+.form-section .card-number-section .card-type svg.visa,
+.form-section .card-number-section .card-type svg.mastercard,
+.form-section .card-number-section .card-type svg.kreditkarte,
+.form-section .card-number-section .card-type svg.error{
+ display:none ;
+}
+
+.close{
+  position: relative;
+  top:1%;
+  left: 90%;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.form-section .card-cvv-section .info-bubble{
+  position: absolute;
+  right: .375rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  cursor: default;
+}
+
+.card-expiry-section{
+  flex-basis: 100%;
+}
+
+.card-expiry-section .input{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-expiry-section .input input{
+  flex-basis: 42%;
+   }
+
+.form-section [class*='-section'] label {
+  font-weight: 500;
+  color: #000000;
+  font-weight: bold;
+}
+
+.form-section .input{
+  width: 100%;
+  margin-top:.5rem;
+}
+
+.form-section .input input{
+  width: 100%;
+ font-size: 1.25rem;
+ font-weight: 500;
+ padding: .25rem .125rem;
+ border:none;
+ border-bottom: 1px solid rgb(66,66,66);
+ background-color: transparent;
+
+}
+
+.form-section .input input.invalid{
+  border-color: red;
+}
+
+.form-section .input  ::placeholder {
+  opacity: .5;
+}
+
+.form-section .input input:focus{
+  border-bottom: 1.5px solid rgb(0, 0, 0);
+}
+.paytext{
+  margin-left: 20px;
+}
+.payment-btn{
+
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 12px 24px .75rem 0;
+  margin-top: 18px;
+  transition:  all ease-in-out 200ms;
+}
+
+ .payment-btn .btn-icon{
+  color: currentcolor;
+  transition: all ease-in-out 200ms;
+}
+
+.payment-btn:hover {
+  color: var(--primary-color);
+  background-color: #349831;
+  padding-left: 1.5rem;
+}
+
+
+.karte-section{
+  width: 42%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.karte-section img {
+  height: 85px;
+  width: 85px;
+}
+
+
+.backgroundfenster {
+  display:none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 1px;
+  z-index : 30;
+  background-color: white;
+}
+
+.active {
+  display: flex !important;
+}
+
+.bezahlenfenster {
+  position: fixed;
+  border-radius: 20px;
+  width: 80%;
+  height: auto;
+  color: white;
+  font-size: 17px;
+  background-color: #006600;
+  padding: 20px;
+  overflow: scroll;
+  margin: 10%;
+}
+.bezahlen {
+    position: relative;
+    height: 18px;
+    width: 25%;
+    left: 70%;
+    background-color: rgb(11, 11, 112);
+    color: aliceblue;
+
+}
+.bezahlenfenster h1{
+  margin-top: 0%;
+}
+
+  footer{
+    display: grid;
+    text-align: center;
+    color: white;
+    background-color:#c03b79;
+    width:100%;
+    padding-top:15px;
+    margin-bottom:0px;
+    clear: both;
+}
+.foot{
+    display: grid;
+    padding: 15px 0;
+    font-size: 15px;
+}
+.titel{
+    font-size: 20px;
+}
+.foo1{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+    margin-right:30%;
+    position: relative;
+    margin-left: 100px;
+    bottom: 40px;
+    font-size: 1rem;
+}
+.foo1:hover{
+    color: green;
+}
+
+i{
+    color: #000000;
+}
+#car{
+    font-size: 44px;
+    color:#fff;
+}
+.liste-horaires{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 0px;
+}
+.liste-horaires li{
+    margin: 10px;
+    
+}
+.foo1{
+    list-style-type: none;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+    margin: 5px 10%;
+}
+.foot .lien-icone{
+    align-items: center;
+    padding: 5px;
+    margin:0px 3px;
+    
+}
+.tit{
+  margin-bottom: 10%;
+}
+.kontakt .titel{
+  margin: 0px;
+}
+.ti{
+  margin-top: 0%;
+}
+.tite{
+  margin: 0px;
+}
+#zeit{
+  font-size: 1rem;
+}
+.fooo{
+  margin-bottom: -40px;
+}
+#add{
+  margin-top: 0%;
+}
+#icon{
+  color: #fff;
+}
+@media screen and (min-width:667px){
+  .toggle{
+      display: none;
+  }
+  .nav{
+      transform: translateX(0);
+      background-color: transparent;
+      position: relative;
+      display: flex;
+      flex-direction:row;
+      transition: transform 0s;
+      width: auto;
+      margin: 10px 0px 0px 0px;
+      padding: 0px;
+  }
+  .nav a{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      margin: -20px;
+      margin-right: -30px;
+      color: black;
+      font-size: 16px;
+
+  }
+  .nav a:hover{
+      background-color: #5856ae;
+      color: white;
+  }
+  .nav a i{
+      margin-right:5px;
+  }
+  .nav .hilfe{
+      background-color: #3E3BC0;
+      color: white;
+      border-radius: 6px;
+      padding: 10px 20px;
+  }
+  header{
+      padding-bottom: 0px;
+      margin-bottom: -30px;
+  }
+  .form-section{
+    position: relative;
+    font-size: 16px;
+    left: 50%;
+  }
+
+  hr{
+  border: 1px solid black;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+  footer{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 30px;
+    background-color: #c03b79;
+  }
+  footer .foot{
+    position: static;
+    margin: 5%px;
+  }
+  footer .foot:nth-child(3){
+    display: flex;
+    flex-direction: column;
+
+  }
+  footer .lo{
+    margin-top: 20px;
+  }
+  .liste-horaires{
+      display: grid;
+      flex-direction: column;
+      margin: 20px 40% 20px 0 ;
+      align-items: center;
+  }
+  #zeit{
+    position: relative;
+    bottom: 40px;
+    margin-right: 35px;
+  }
+  .foo1{
+    position: relative;
+    bottom: 40px;
+  }
+  #add{
+    position: relative;
+
+  }
+  .bezahl{
+    font-size: 15px;
+  }
+  #copi{
+    padding-top: 50px;
+    margin-left: 9%;
+
+  }
+  .folge{
+    display: flex;
+    flex-direction: column;
+    margin-left: 9%;
+  }
+  .fooo{
+    margin-left: 10%;
+  }
+  .kontakt{
+    margin-left: 10%;
+  }
+  #addKont{
+    position: relative;
+    top: -50%;
+  }
+  .fo {
+    margin-left: 9%;
+  }
+  .foot .name{
+    position: relative;
+    top:50%;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .bezahlenfenster{
+    width: 600px;
+    margin: 6% 20% auto 20%;
+    }
+    .backgroundfenster{
+      display: flex;
+      justify-content: center;
+    }
+}
+
