@@ -4,11 +4,11 @@
 
 body{
  display: grid;
- font-family: 'poppins' , sans-serif;
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  margin: 0%;
  padding: 0%;
  background-color: white;
- height: 100%;
+ height: auto;
 }
 header{
   z-index: 1;
@@ -70,6 +70,9 @@ header{
   font-weight: bold;
   font-size: 3em;
 }
+.auto{
+  height:20rem;
+}
 
 .auto img{
   height: 40vh;
@@ -98,7 +101,7 @@ header{
   display: grid;
   justify-content: space-between;
   padding: 10px 5px;
-  overflow: hidden;
+  overflow:scroll;
 }
 h2{
   text-align: center;
@@ -284,7 +287,6 @@ right: 20px;
 }
 
 .bezahlenfenster {
-  position: fixed;
   border-radius: 20px;
   width: 80%;
   height: auto;
@@ -296,13 +298,15 @@ right: 20px;
   margin: 10%;
 }
 .bezahlen {
-    position: relative;
-    height: 18px;
-    width: 25%;
-    left: 70%;
-    background-color: rgb(11, 11, 112);
-    color: aliceblue;
-
+  position: relative;
+  height: 30px;
+  width: 9rem;
+  left: 45%;
+  background-color: rgb(11, 11, 112);
+  color: aliceblue;
+  border-radius: 7px;
+  border: none;
+  font-size: 20px;
 }
 .bezahlenfenster h1{
   margin-top: 0%;
@@ -526,12 +530,12 @@ i{
 
 @media screen and (min-width: 800px){
   .bezahlenfenster{
-    width: 600px;
-    margin: 6% 20% auto 20%;
-    }
-    .backgroundfenster{
-      display: flex;
-      justify-content: center;
-    }
+   width: 647px;
+  }
+  .backgroundfenster{
+    display: flex;
+    justify-content: center;
+
+  }
 }
 
