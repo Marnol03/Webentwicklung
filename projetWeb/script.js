@@ -4,8 +4,7 @@ toggle.addEventListener('click',function()
   {
    body.classList.toggle('open')
    }
- )
-
+)
 
 var roue = document.getElementById('roue');
 var listePhotos = document.getElementById('liste-roues');

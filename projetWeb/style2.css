@@ -368,15 +368,10 @@ header{
     margin: 0px 10px;
     border-radius: 10px;
 }
-#auto1{
+#auto1, #auto2, #auto3{
     display: none;
 }
-#auto2{
-    display: none;
-}
-#auto3{
-    display: none;
-}
+
 .hidden {
     display: grid;
 
@@ -490,9 +485,9 @@ i{
     .nav a{
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        padding:10px;
         margin: -20px;
-        margin-right: -30px;
+        margin-right: -60px;
         color: white;
         font-size: 16px;
         border-radius: 5px;
@@ -545,12 +540,13 @@ i{
     }
     .werbung img{
         width: 500px;
-        height: 250px;
+        height: 200px;
         border: 5px solid transparent;
    
     }
     .h1{
         font-size: 50px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
     }
     .main{
         margin: 20px 10%;
