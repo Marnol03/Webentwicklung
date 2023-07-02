@@ -13,22 +13,23 @@ var listeBild = document.getElementById('liste-sieges');
 var parechoc = document.getElementById('parechoc');
 var listeBilder = document.getElementById('liste-parechocs');
 
-roue.addEventListener('click', function() {
-  Display(listePhotos);
-  roue.style.backgroundColor='black';
-  roue.style.color='white';
-});
+
+ roue.addEventListener('click', function() {
+   Display(listePhotos);
+   roue.style.backgroundColor='black';
+   roue.style.color='white';
+ });
 
 siege.addEventListener("click", function() {
   Display(listeBild);
-  siege.style.backgroundColor='black';
-  siege.style.color='white';
-});
+   siege.style.backgroundColor='black';
+   siege.style.color='white';
+ });
 
-parechoc.addEventListener("click", function() {
-  Display(listeBilder);
+  parechoc.addEventListener("click", function() {
+   Display(listeBilder);
   parechoc.style.backgroundColor='black';
-  parechoc.style.color='white';
+   parechoc.style.color='white';
 });
 
 function Display(element) {
@@ -69,6 +70,7 @@ for (var i = 0; i < radioElements.length; i++) {
       } else {
         imgElement = document.createElement('img');
         imgElement.className = 'img1';
+        imgElement.id='img1';
         imgElement.src = imageURL;
         imgElement.alt = 'Image sélectionnée';
         photoContainer.appendChild(imgElement);
@@ -94,6 +96,7 @@ for (var i = 0; i < radioElements.length; i++) {
       } else {
         imgElement1 = document.createElement('img');
         imgElement1.className = 'img2';
+        imgElement1.id='img2';
         imgElement1.src = imageURL;
         imgElement1.alt = 'Image1 sélectionnée';
         photoContainer.appendChild(imgElement1);
@@ -103,7 +106,6 @@ for (var i = 0; i < radioElements.length; i++) {
   });
 }
 var autoElements = document.getElementsByClassName('auto');
-
 function showAuto(autoId) {
   for (var i = 0; i < autoElements.length; i++) {
     if (autoElements[i].id === autoId) {
@@ -184,6 +186,8 @@ coll3.addEventListener("click", function(){
  coll1.style.borderColor='white';
   imgElement1.style.filter='hue-rotate(0deg)';
 });
+
+
 const questions = document.querySelectorAll('.question');
 
 const colp=0;
@@ -234,7 +238,6 @@ function calculateAndUpdateTotalPrice() {
   }
 }
 
-
 rouesRadios.forEach(radio => {
   radio.addEventListener('change', calculateAndUpdateTotalPrice);
 });
@@ -246,18 +249,44 @@ siegesRadios.forEach(radio => {
 parechocsRadios.forEach(radio => {
   radio.addEventListener('change', calculateAndUpdateTotalPrice);
 });
-collist.forEach(span =>{
-  div.addEventListener('click', calculateAndUpdateTotalPrice);
-})
 
-let warenkorbbtn = document.getElementById('warenkorbbtn');
-var AusgewählteB = document.getElementById("img3");
+function Beschreibung(){
+  for (var i = 0; i < autoElements.length; i++) {
+    if (autoElements[i].style.display === 'block') {
+      var data = autoElements[i].id;
+      const Beschrei = document.getElementById(data).innerHTML;
+      localStorage.setItem('beschreib', Beschrei);
+    }
+  }
+};
 
-warenkorbbtn.addEventListener("click", function() {
-  var bURL = AusgewählteB.src;
+document.addEventListener('DOMContentLoaded', function() {
+  var warenkorbbtn = document.getElementById('warenkorbbtn');
   
-  localStorage.setItem("AusgewählteBURL", bURL);
-  
-  window.location.href = "warenkorp.html?imageURL=" + encodeURIComponent(bURL);
+
+  warenkorbbtn.addEventListener('click', function() {
+    var imgs = document.getElementById('img1');
+    var imgSrc = imgs.getAttribute('src');
+    
+    var imgs1 = document.getElementById('img2');
+    var imgSrc1 = imgs1.getAttribute('src');
+
+    var imgs2 = document.getElementById('img3');
+    var imgSrc2 = imgs2.getAttribute('src');
+
+    localStorage.setItem('img1', imgSrc);
+    localStorage.setItem('img2', imgSrc1);
+    localStorage.setItem('img3', imgSrc2);
+
+    Beschreibung();
+
+
+    window.location.href = 'warenkorp.html';
+     
+    
+  });
 });
+
+
+
 
