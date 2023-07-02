@@ -271,7 +271,6 @@ header{
     display: none;
 }
 .dick{
-    display: grid;
     width: 200px;
     height: 200px; 
     overflow: hidden;
@@ -279,6 +278,11 @@ header{
     border: 2px solid rgb(7, 4, 4); 
     border-radius: 7px;
     position:relative;
+}
+.bschreib{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
 }
 .croix{
     top:-1px;
@@ -364,6 +368,7 @@ header{
     margin: 5px 20px 0px 20px;
     border-radius: 2px 5px 7px 9px;
 }
+
 .auto{
     margin: 0px 10px;
     border-radius: 10px;
